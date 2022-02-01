@@ -12,6 +12,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using YogaMockUp.Data;
+using YogaMockUp.Services;
 
 namespace YogaMockUp
 {
@@ -35,6 +36,9 @@ namespace YogaMockUp
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddControllersWithViews();
+
+            ////Adding DbInitializer Service
+            //services.AddAsyncInitializer<DbInitializer>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
