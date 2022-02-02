@@ -48,6 +48,9 @@ namespace YogaMockUp.Services
             {
                 await CreateRoleAsync("Admin");
                 await CreateRoleAsync("User");
+                await CreateRoleAsync("Teacher");
+                await CreateRoleAsync("Customer");
+                await CreateRoleAsync("Student");
 
                 //Seed users
                 if (!_db.Users.Any())
@@ -63,6 +66,40 @@ namespace YogaMockUp.Services
                         await _userManager.CreateAsync(user, "123Asd@1");
                         await _userManager.AddToRoleAsync(user, "Admin");
                     }
+                    if (_userManager.FindByEmailAsync("neo@email.com").Result == null)
+                    {
+                        var user = new ApplicationUser
+                        {
+                            FirstName = "Neo",
+                            LastName = "Andersson",
+                            Email = "neo@email.com",
+                        };
+                        await _userManager.CreateAsync(user, "123Asd@1");
+                        await _userManager.AddToRoleAsync(user, "User");
+                    }
+                    if (_userManager.FindByEmailAsync("lisa@email.com").Result == null)
+                    {
+                        var user = new ApplicationUser
+                        {
+                            FirstName = "Lisa",
+                            LastName = "Lisa",
+                            Email = "lisa@email.com",
+                        };
+                        await _userManager.CreateAsync(user, "123Asd@1");
+                        await _userManager.AddToRoleAsync(user, "User");
+                    }
+                    if (_userManager.FindByEmailAsync("peter@email.com").Result == null)
+                    {
+                        var user = new ApplicationUser
+                        {
+                            FirstName = "Peter",
+                            LastName = "Parker",
+                            Email = "peter@email.com",
+                        };
+                        await _userManager.CreateAsync(user, "123Asd@1");
+                        await _userManager.AddToRoleAsync(user, "Teacher");
+                    }
+                    // End seed users //
                 }
             }
         }
