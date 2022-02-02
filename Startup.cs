@@ -49,6 +49,9 @@ namespace YogaMockUp
             services.AddControllersWithViews();
             services.AddRazorPages();
 
+            // Connecting the services to their interfaces
+            services.AddTransient<IGlobalServices, GlobalServices>();
+
             //Adding DbInitializer Service
             services.AddAsyncInitializer<DbInitializer>();
 

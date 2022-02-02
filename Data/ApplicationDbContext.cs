@@ -18,5 +18,8 @@ namespace YogaMockUp.Data
             : base(options)
         {
         }
+        public DbSet<Course> Courses { get; set; }
+        public DbSet<Customer> Customers { get; set; }
+        //DbSet<Teacher> Teachers { get; set; }
     }
 }
