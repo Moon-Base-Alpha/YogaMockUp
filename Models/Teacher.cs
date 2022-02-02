@@ -1,13 +1,9 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Identity;
-using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 
 namespace YogaMockUp.Models
 {
-    public class Customer : ApplicationUser
+    public class Teacher : ApplicationUser
     {
         [Required, StringLength(100)]
         public string Address { get; set; } = string.Empty;
@@ -20,7 +16,7 @@ namespace YogaMockUp.Models
 
         public List<Course> Courses { get; set; } = new List<Course>();
 
-        public Customer()
+        public Teacher()
         {
 
         }

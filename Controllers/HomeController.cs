@@ -7,6 +7,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using YogaMockUp.Models;
+using YogaMockUp.Services;
 
 namespace YogaMockUp.Controllers
 {
@@ -15,16 +16,19 @@ namespace YogaMockUp.Controllers
         private readonly SignInManager<ApplicationUser> _signInManager;
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly ILogger<HomeController> _logger;
+        private readonly IGlobalServices _globalServices;
 
-        public HomeController(ILogger<HomeController> logger, SignInManager<ApplicationUser> signInManager, UserManager<ApplicationUser> userManager)
+        public HomeController(ILogger<HomeController> logger, SignInManager<ApplicationUser> signInManager, UserManager<ApplicationUser> userManager, IGlobalServices IGS)
         {
             _logger = logger;
             _signInManager = signInManager;
             _userManager = userManager;
+            _globalServices = IGS;
         }
 
         public IActionResult Index()
         {
+            _globalServices.SeedStuff();
             return View();
         }
 
