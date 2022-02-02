@@ -12,6 +12,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using YogaMockUp.Data;
+using YogaMockUp.Models;
 using YogaMockUp.Services;
 
 namespace YogaMockUp
@@ -33,12 +34,24 @@ namespace YogaMockUp
                     Configuration.GetConnectionString("DefaultConnection")));
             services.AddDatabaseDeveloperPageExceptionFilter();
 
-            services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+            services.AddDefaultIdentity<ApplicationUser>(options =>
+            {
+                options.SignIn.RequireConfirmedAccount = false;
+                options.Password.RequireDigit = true;
+                options.Password.RequireLowercase = true;
+                options.Password.RequireUppercase = true;
+                options.Password.RequireNonAlphanumeric = false;
+                options.Password.RequiredLength = 6;
+                options.User.RequireUniqueEmail = true;
+            })
+                .AddRoles<IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddControllersWithViews();
+            services.AddRazorPages();
 
-            ////Adding DbInitializer Service
-            //services.AddAsyncInitializer<DbInitializer>();
+            //Adding DbInitializer Service
+            services.AddAsyncInitializer<DbInitializer>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
