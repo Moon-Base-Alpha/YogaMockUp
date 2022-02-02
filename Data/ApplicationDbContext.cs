@@ -20,6 +20,6 @@ namespace YogaMockUp.Data
         }
         public DbSet<Course> Courses { get; set; }
         public DbSet<Customer> Customers { get; set; }
-        //DbSet<Teacher> Teachers { get; set; }
+        public DbSet<Teacher> Teachers { get; set; }
     }
 }
