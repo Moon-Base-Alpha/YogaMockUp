@@ -61,6 +61,10 @@ namespace YogaMockUp.Services
                     LastName = "Dayakar",
                     UserName = "rajesh@email.com",
                     Email = "rajesh@email.com",
+                    Address = "WorldstreetAddress",
+                    City = "WorldCity",
+                    ZipCode = "12345",
+                    
                 };
                 var result = await _userManager.CreateAsync(user, "123Asd@1");
                 if (result.Succeeded)
@@ -76,6 +80,9 @@ namespace YogaMockUp.Services
                     LastName = "carsson",
                     UserName = "user@email.com",
                     Email = "user@email.com",
+                    Address = "WorldstreetAddress",
+                    City = "WorldCity",
+                    ZipCode = "12345",
                 };
                 var result = await _userManager.CreateAsync(user, "123Asd@1");
                 if (result.Succeeded)
@@ -91,6 +98,9 @@ namespace YogaMockUp.Services
                     LastName = "Andersson",
                     UserName = "teacher@email.com",
                     Email = "teacher@email.com",
+                    Address = "WorldstreetAddress",
+                    City = "WorldCity",
+                    ZipCode = "12345",
                 };
                 var result = await _userManager.CreateAsync(user, "123Asd@1");
                 if (result.Succeeded)
@@ -106,6 +116,9 @@ namespace YogaMockUp.Services
                     LastName = "Andersson",
                     UserName = "neo@email.com",
                     Email = "neo@email.com",
+                    Address = "WorldstreetAddress",
+                    City = "WorldCity",
+                    ZipCode = "12345",
                 };
                 var result = await _userManager.CreateAsync(user, "123Asd@1");
                 if (result.Succeeded)
@@ -121,6 +134,9 @@ namespace YogaMockUp.Services
                     LastName = "Lisa",
                     UserName = "lisa@email.com",
                     Email = "lisa@email.com",
+                    Address = "WorldstreetAddress",
+                    City = "WorldCity",
+                    ZipCode = "12345",
                 };
                 var result = await _userManager.CreateAsync(user, "123Asd@1");
                 if (result.Succeeded)
@@ -137,6 +153,9 @@ namespace YogaMockUp.Services
                     LastName = "Parker",
                     UserName = "peter@email.com",
                     Email = "peter@email.com",
+                    Address = "WorldstreetAddress",
+                    City = "WorldCity",
+                    ZipCode = "12345",
                 };
                 var result = await _userManager.CreateAsync(user, "123Asd@1");
                 if (result.Succeeded)
@@ -145,6 +164,43 @@ namespace YogaMockUp.Services
                 }
             }
             // End seed users //
+
+            if(!(_db.Courses.Count() > 0))
+            {
+                var course = new Course // seeding a course becasue I can't figure out how to do it in DBinitialize
+                {
+                    CourseName = "Course1",
+                    Description = "Desc1",
+                    Location = "theworld",
+                    Date = System.DateTime.Now,
+                    Price = 555
+                };
+                _db.Courses.Add(course);
+
+                course = new Course // seeding a course becasue I can't figure out how to do it in DBinitialize
+                {
+                    CourseName = "Course2",
+                    Description = "Desc2",
+                    Location = "theworld",
+                    Date = System.DateTime.Now,
+                    Price = 555
+                };
+                _db.Courses.Add(course);
+
+                course = new Course // seeding a course becasue I can't figure out how to do it in DBinitialize
+                {
+                    CourseName = "Course3",
+                    Description = "Desc3",
+                    Location = "theworld",
+                    Date = System.DateTime.Now,
+                    Price = 555
+                };
+                _db.Courses.Add(course);
+
+                _db.SaveChanges();
+            }
+
+
         }
     }
 }

@@ -10,17 +10,12 @@ coloral course editing for admin</h1>
 <h4>Course</h4>
 
 <hr />
-
+<script>$var temp = ""</script>
 <div class="row">
         <div class="row col-4">
             <form asp-action="EditCourseInfo">
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                 <input type="hidden" asp-for="Id" />
-                <div class="form-group">
-                    <label asp-for="CustomerId" class="control-label"></label>
-                    <input asp-for="CustomerId" class="form-control" />
-                    <span asp-validation-for="CustomerId" class="text-danger"></span>
-                </div>
                 <div class="form-group">
                     <label asp-for="CourseName" class="control-label"></label>
                     <input asp-for="CourseName" class="form-control" />
@@ -29,6 +24,7 @@ coloral course editing for admin</h1>
                 <div class="form-group">       
                     <br />
                     <textarea id="TextAreaCourseDescription" style="width:100%" onkeyup="JSFN_UserChangesDescription()">@Model.Description</textarea>  
+                    <input id="sendbackDesc" type="hidden" asp-for="Description" value="" />
                     <span asp-validation-for="Description" class="text-danger"></span>
                 </div>
 
@@ -52,7 +48,7 @@ coloral course editing for admin</h1>
                 </div>
             </form>
         </div>
-        <div class="col-7 card" style="background-color:rgba(255,165,0,0.1)">
+        <div class="col-7 card">
             <br />
             <div ><h4>Course discription preview: </h4></div>
             <br />
@@ -72,7 +68,15 @@ coloral course editing for admin</h1>
             $.ajax({                    
                 success:function() {
                     var A =  document.getElementById("TextAreaCourseDescription").value;
-                    document.getElementById("ResultCourseDescription").innerHTML = A;                    
+                    //gets the text from the input field
+
+                    document.getElementById("ResultCourseDescription").innerHTML = A;   
+                    //shows the inputed text after formatting as html, as a preview of 
+                    // how it will look on the page later
+
+                    document.getElementById("sendbackDesc").value = A;      
+                    //sets the value that the form returns back to the 
+                    // controller in order to update the database with the edited text
                 }
             });            
         }
