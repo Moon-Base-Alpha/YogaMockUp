@@ -28,7 +28,7 @@ namespace YogaMockUp.Controllers
 
         public IActionResult Index()
         {
-            _globalServices.SeedStuff();
+             //_globalServices.SeedStuff();
             return View();
         }
 
