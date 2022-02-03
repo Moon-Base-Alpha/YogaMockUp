@@ -51,57 +51,100 @@ namespace YogaMockUp.Services
                 await CreateRoleAsync("Teacher");
                 await CreateRoleAsync("Customer");
                 await CreateRoleAsync("Student");
-
-                //Seed users
-                if (!_db.Users.Any())
+            }
+            //Seed users
+            if (_userManager.FindByEmailAsync("rajesh@email.com").Result == null)
+            {
+                var user = new ApplicationUser
                 {
-                    if (_userManager.FindByEmailAsync("rajesh@email.com").Result == null)
-                    {
-                        var user = new ApplicationUser
-                        {
-                            FirstName = "Rajesh",
-                            LastName = "Dayakar",
-                            Email = "rajesh@email.com",
-                        };
-                        await _userManager.CreateAsync(user, "123Asd@1");
-                        await _userManager.AddToRoleAsync(user, "Admin");
-                    }
-                    if (_userManager.FindByEmailAsync("neo@email.com").Result == null)
-                    {
-                        var user = new ApplicationUser
-                        {
-                            FirstName = "Neo",
-                            LastName = "Andersson",
-                            Email = "neo@email.com",
-                        };
-                        await _userManager.CreateAsync(user, "123Asd@1");
-                        await _userManager.AddToRoleAsync(user, "User");
-                    }
-                    if (_userManager.FindByEmailAsync("lisa@email.com").Result == null)
-                    {
-                        var user = new ApplicationUser
-                        {
-                            FirstName = "Lisa",
-                            LastName = "Lisa",
-                            Email = "lisa@email.com",
-                        };
-                        await _userManager.CreateAsync(user, "123Asd@1");
-                        await _userManager.AddToRoleAsync(user, "User");
-                    }
-                    if (_userManager.FindByEmailAsync("peter@email.com").Result == null)
-                    {
-                        var user = new ApplicationUser
-                        {
-                            FirstName = "Peter",
-                            LastName = "Parker",
-                            Email = "peter@email.com",
-                        };
-                        await _userManager.CreateAsync(user, "123Asd@1");
-                        await _userManager.AddToRoleAsync(user, "Teacher");
-                    }
-                    // End seed users //
+                    FirstName = "Rajesh",
+                    LastName = "Dayakar",
+                    UserName = "rajesh@email.com",
+                    Email = "rajesh@email.com",
+                };
+                var result = await _userManager.CreateAsync(user, "123Asd@1");
+                if (result.Succeeded)
+                {
+                    await _userManager.AddToRoleAsync(user, "Admin");
                 }
             }
+            if (_userManager.FindByEmailAsync("user@email.com").Result == null)
+            {
+                var user = new ApplicationUser
+                {
+                    FirstName = "User",
+                    LastName = "carsson",
+                    UserName = "user@email.com",
+                    Email = "user@email.com",
+                };
+                var result = await _userManager.CreateAsync(user, "123Asd@1");
+                if (result.Succeeded)
+                {
+                    await _userManager.AddToRoleAsync(user, "User");
+                }
+            }
+            if (_userManager.FindByEmailAsync("teacher@email.com").Result == null)
+            {
+                var user = new ApplicationUser
+                {
+                    FirstName = "Teacher",
+                    LastName = "Andersson",
+                    UserName = "teacher@email.com",
+                    Email = "teacher@email.com",
+                };
+                var result = await _userManager.CreateAsync(user, "123Asd@1");
+                if (result.Succeeded)
+                {
+                    await _userManager.AddToRoleAsync(user, "Teacher");
+                }
+            }
+            if (_userManager.FindByEmailAsync("neo@email.com").Result == null)
+            {
+                var user = new ApplicationUser
+                {
+                    FirstName = "Neo",
+                    LastName = "Andersson",
+                    UserName = "neo@email.com",
+                    Email = "neo@email.com",
+                };
+                var result = await _userManager.CreateAsync(user, "123Asd@1");
+                if (result.Succeeded)
+                {
+                    await _userManager.AddToRoleAsync(user, "User");
+                }
+            }
+            if (_userManager.FindByEmailAsync("lisa@email.com").Result == null)
+            {
+                var user = new ApplicationUser
+                {
+                    FirstName = "Lisa",
+                    LastName = "Lisa",
+                    UserName = "lisa@email.com",
+                    Email = "lisa@email.com",
+                };
+                var result = await _userManager.CreateAsync(user, "123Asd@1");
+                if (result.Succeeded)
+                {
+                    await _userManager.AddToRoleAsync(user, "User");
+                }
+
+            }
+            if (_userManager.FindByEmailAsync("peter@email.com").Result == null)
+            {
+                var user = new ApplicationUser
+                {
+                    FirstName = "Peter",
+                    LastName = "Parker",
+                    UserName = "peter@email.com",
+                    Email = "peter@email.com",
+                };
+                var result = await _userManager.CreateAsync(user, "123Asd@1");
+                if (result.Succeeded)
+                {
+                    await _userManager.AddToRoleAsync(user, "User");
+                }
+            }
+            // End seed users //
         }
     }
 }
