@@ -7,7 +7,6 @@ namespace YogaMockUp.Models
     public class Course
     {
         public int Id { get; set; }
-        public int CustomerId { get; set; }
 
         [Required, StringLength(100)]
         public string CourseName { get; set; } = string.Empty;
@@ -24,7 +23,7 @@ namespace YogaMockUp.Models
         [Required]
         public decimal Price { get; set; }
 
-        public List<Customer> Customers { get; set; } = new List<Customer>();
+        public List<ApplicationUser> Users { get; set; } = new List<ApplicationUser>();
         public Course()
         {
 

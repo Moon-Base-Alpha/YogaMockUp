@@ -28,7 +28,19 @@ namespace YogaMockUp.Controllers
 
         public IActionResult Index()
         {
-             //_globalServices.SeedStuff();
+            if (!(_globalServices.GetAllCourses().Count > 0))
+            {
+                var course = new Course
+                {
+                    CourseName = "Course1",
+                    Description = "course1 description",
+                    Location = "theworld",
+                    Date = System.DateTime.Now,
+                    Price = 555
+                };
+                var result = _globalServices.CreateCourse(course);
+            }
+
             return View();
         }
 
