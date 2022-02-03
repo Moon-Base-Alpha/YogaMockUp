@@ -1,11 +1,11 @@
 ﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
 
-a.navbar-brand {
+/*a.navbar-brand {
   white-space: normal;
   text-align: center;
   word-break: break-all;
-}
+}*/
 
 /* Provide sufficient contrast against white background */
 a {
@@ -14,14 +14,14 @@ a {
 
 .btn-primary {
   color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+  background-color: #1f457c;
+  border-color: #1f457c;
 }
 
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
   color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+  background-color: #1f457c;
+  border-color: #1f457c;
 }
 
 /* Sticky footer styles
@@ -63,9 +63,277 @@ body {
   margin-bottom: 60px;
 }
 .footer {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   width: 100%;
   white-space: nowrap;
   line-height: 60px; /* Vertically center the text there */
 }
+
+
+/*for Login tab control*/
+div.login-logout-tab div.card-header {
+    padding: 0px 0px 12px 0px;
+}
+
+div.login-logout-tab ul.nav-tabs {
+    margin: 0px 0px -12px 0px;
+}
+
+div.login-logout-tab li.nav-item {
+    width: 50%;
+}
+
+div.login-logout-tab a.nav-link {
+    font-size: 25px;
+    color: #495057;
+    text-align: center;
+}
+
+div.card-content {
+    padding: 10px 20px;
+}
+
+/*login form*/
+div.login-form-icon {
+    text-align: center;
+}
+
+/*End for Login tab control*/
+
+/*  CSS for tag function */ 
+*,
+::after,
+::before {
+    box-sizing: border-box;
+}
+
+.keyHandler {
+    float: left;
+    width: 250px;
+    height: 40px;
+}
+
+    .keyHandler > button {
+       /* display: inline-flex;
+        align-items: center;*/
+        float: left;
+        height: 100%;
+        width: 40px;
+        border: none;
+        outline: none !important;
+        background: #673AB7;
+        border-radius: 7px;
+        color: white;
+        cursor: pointer;
+        font-size: 26pt;
+        line-height:0;
+        
+    }
+
+    .keyHandler > input {
+        float: left;
+        width: calc(100% - 45px);
+        margin: 0 0 0 5px;
+        height: 38px;
+        padding: 0 14px;
+        background: #ffffff;
+        border: none;
+        outline: none !important;
+        font-family: monospace;
+        border-bottom: 2px solid #673AB7;
+    }
+
+.addedKeysHolder {
+    float: left;
+    width: 100%;
+    height: auto;
+    margin: 8px 0 0 0;
+}
+
+    .addedKeysHolder > span {
+        background: #2196F3;
+        padding: 8px 10px 8px 30px;
+        float: left;
+        margin: 2px;
+        border-radius: 100px;
+        color: white;
+        font-family: monospace;
+        font-size: 12pt;
+        position: relative;
+        cursor: pointer;
+    }
+
+        .addedKeysHolder > span:after {
+            content: "\d7";
+            position: absolute;
+            left: 12px;
+            top: 0;
+            bottom: 0;
+            width: 14px;
+            height: 14px;
+            line-height: .5;
+            margin: auto;
+            font-size: 17pt;
+        }
+/*  END CSS for tag function  */
+
+/* Orange frame around the body */
+body {
+    padding:3px;
+    background-color: orange;
+    color: black;
+}
+
+/* Earth background*/
+.mandala {
+    background-image: url(/images/mandala3.jpg);
+    background-size:cover;
+    background-position: 60% 70%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 1000px;
+    position: relative;
+}
+
+/* Header Parallax Element Style*/
+.paral {
+    min-height: 600px;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+    /* Paragrapgh for Parallax Section */
+    .paral p {
+        font-size: 24px;
+        color: #f5f5f5;
+        text-align: center;
+        line-height: 60px;
+    }
+
+    /* Heading for Parallax Section */
+    .paral h1 {
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 60px;
+        text-align: center;
+        padding-top: 60px;
+        line-height: 100px;
+    }
+
+/* Image for Parallax Section */
+.moon {
+    background-image: url(/images/mandala.jpg);
+    background-position: 0% 0%;
+    /*background-size: 100%;*/
+    background-repeat: no-repeat;
+    /*height: auto;*/
+    position: relative;
+}
+
+/* Add more images for more sections */
+
+/* Remove Bottom Margin from Jumbotron */
+.jumbotron {
+    margin-bottom: 0;
+}
+
+
+ /*Footer*/
+.footer {
+    /*padding: 0.5rem 0.5rem 0.5rem 0.5rem;*/
+    text-align: center;
+    color: white;
+    background-color: mediumpurple;
+    /*border-top: .05rem solid #e5e5e5;*/
+}
+
+.footer div{
+    color:white;
+    text-size-adjust:150%;
+}
+.footer a {
+        color: yellow;
+    }
+
+/*Post styles*/
+.postcontainer {
+    background-color: rgba(45, 45, 45, 0.7);
+    /*opacity: .4;*/
+}
+
+.postcontainer h1, .postcontainer p {
+        color: lightgray;
+    }
+
+    .postcontainer a {
+        color: steelblue;
+    }
+.created {
+    font-size: 0.7em;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: -0.1rem !important;
+    color: gray;
+}
+
+.updated {
+    font-size: 0.7em;
+    text-transform: uppercase;
+    margin-bottom: -0.2rem !important;
+    color: gray;
+}
+
+.comment {
+    background-color: rgba(10, 10, 10, 0.5);
+}
+.comment h1, .comment p {
+        color: lightgray;
+}
+
+
+.image-radio {
+    display: block;
+    position: relative;
+    padding-left:25px;
+    margin-bottom: 16px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+/* HIDE RADIO */
+
+.image-radio input{
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  /*  width: 0;
+    height: 0;*/
+}
+
+    /* IMAGE STYLES */
+.image-radio-img {
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    opacity: 50;
+    height: 216px;
+    width: 384px;
+    margin: 5px;
+    border-radius: 5px;
+}
+/* On mouse-over, add a opacity */
+.image-radio:hover input ~ .image-radio-img {
+    opacity: 100;
+}
+    /* CHECKED STYLES */
+.image-radio input:checked ~ .image-radio-img {
+    outline: 2px solid #0d6efd78;
+    margin: 5px;
+    border-radius: 5px;
+    /*display: block;*/
+}
+
