@@ -55,7 +55,11 @@
                 @RenderBody()
             </main>
         </div>
+
         <footer class="border-top footer text-muted">
+            <div class="lotus">
+                <img src="/images/lotus-icon.png" alt="Lotus" width="333" height="99"></a>
+            </div>
             <div class="container">
                 &copy; 2022 - YogaMockUp - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
             </div>
@@ -64,7 +68,7 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
-    <script src="~/js/custom.js" asp-append-version="true"></script>
+    @*<script src="~/js/custom.js" asp-append-version="true"></script>*@
 
     @await RenderSectionAsync("Scripts", required: false)
 </body>
