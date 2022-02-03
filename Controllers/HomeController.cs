@@ -23,6 +23,11 @@ namespace YogaMockUp.Controllers
             return View();
         }
 
+        public IActionResult CarouselEx()
+        {
+            return View();
+        }
+
         public IActionResult Privacy()
         {
             return View();
