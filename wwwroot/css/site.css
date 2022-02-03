@@ -106,6 +106,7 @@ div.login-form-icon {
 ::after,
 ::before {
     box-sizing: border-box;
+
 }
 
 .keyHandler {
@@ -187,7 +188,7 @@ body {
 
 /* Earth background*/
 .mandala {
-    background-image: url(/images/mandala3.jpg);
+    background-image: url(/images/mandala5.jpg);
     background-size:cover;
     background-position: 60% 70%;
     background-repeat: no-repeat;
@@ -238,13 +239,25 @@ body {
     margin-bottom: 0;
 }
 
+/*Lotus Flower*/
+.lotus {
+    /*padding: 0.5rem 0.5rem 0.5rem 0.5rem;*/
+    position: absolute;
+    bottom: 60px;
+    text-align: center;
+    left: 42%;
+    /*transform: translate(-50%,-50%%);*/
+    /*color: white;*/
+    background-color: none;
+    /*border-top: .05rem solid #e5e5e5;*/
+}
 
  /*Footer*/
 .footer {
     /*padding: 0.5rem 0.5rem 0.5rem 0.5rem;*/
     text-align: center;
     color: white;
-    background-color: mediumpurple;
+    background-color: #B23992;
     /*border-top: .05rem solid #e5e5e5;*/
 }
 
