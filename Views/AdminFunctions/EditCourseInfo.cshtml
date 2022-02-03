@@ -1,0 +1,82 @@
+﻿@model YogaMockUp.Models.Course
+
+
+@{
+    ViewData["Title"] = "EditCourseInfo";
+}
+
+coloral course editing for admin</h1>
+
+<h4>Course</h4>
+
+<hr />
+
+<div class="row">
+        <div class="row col-4">
+            <form asp-action="EditCourseInfo">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <input type="hidden" asp-for="Id" />
+                <div class="form-group">
+                    <label asp-for="CustomerId" class="control-label"></label>
+                    <input asp-for="CustomerId" class="form-control" />
+                    <span asp-validation-for="CustomerId" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="CourseName" class="control-label"></label>
+                    <input asp-for="CourseName" class="form-control" />
+                    <span asp-validation-for="CourseName" class="text-danger"></span>
+                </div>
+                <div class="form-group">       
+                    <br />
+                    <textarea id="TextAreaCourseDescription" style="width:100%" onkeyup="JSFN_UserChangesDescription()">@Model.Description</textarea>  
+                    <span asp-validation-for="Description" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Location" class="control-label"></label>
+                    <input asp-for="Location" class="form-control" />
+                    <span asp-validation-for="Location" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Date" class="control-label"></label>
+                    <input asp-for="Date" class="form-control" />
+                    <span asp-validation-for="Date" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Price" class="control-label"></label>
+                    <input asp-for="Price" class="form-control" />
+                    <span asp-validation-for="Price" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Save" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+        <div class="col-7 card" style="background-color:rgba(255,165,0,0.1)">
+            <br />
+            <div ><h4>Course discription preview: </h4></div>
+            <br />
+            <div style="border:groove" id="ResultCourseDescription" >@Model.Description</div>
+             
+        </div>
+</div>
+
+
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+<script>
+    function JSFN_UserChangesDescription()
+        {
+            $.ajax({                    
+                success:function() {
+                    var A =  document.getElementById("TextAreaCourseDescription").value;
+                    document.getElementById("ResultCourseDescription").innerHTML = A;                    
+                }
+            });            
+        }
+</script>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
