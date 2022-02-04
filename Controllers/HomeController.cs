@@ -28,6 +28,12 @@ namespace YogaMockUp.Controllers
 
         public IActionResult Index()
         {
+             //_globalServices.SeedStuff();
+            return View();
+        }
+
+        public IActionResult CarouselEx()
+        {
             return View();
         }
 

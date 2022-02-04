@@ -41,7 +41,7 @@
   --bs-danger: #dc3545;
   --bs-light: #f8f9fa;
   --bs-dark: #212529;
-  --bs-primary-rgb: 13, 110, 253;
+  --bs-primary-rgb: 31, 69, 124;
   --bs-secondary-rgb: 108, 117, 125;
   --bs-success-rgb: 25, 135, 84;
   --bs-info-rgb: 13, 202, 240;
@@ -109,11 +109,11 @@ h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
 }
 
 h1, .h1 {
-  font-size: calc(1.375rem + 1.5vw);
+  font-size: calc(1rem + 1.5vw);
 }
 @media (min-width: 1200px) {
   h1, .h1 {
-    font-size: 2.5rem;
+    font-size: 2.3rem;
   }
 }
 
@@ -236,10 +236,11 @@ sup {
 
 a {
   color: #0d6efd;
-  text-decoration: underline;
+  text-decoration: none;
 }
 a:hover {
-  color: #0a58ca;
+  color: #a9aeb4;
+  text-decoration: none;
 }
 
 a:not([href]):not([class]), a:not([href]):not([class]):hover {
@@ -2809,6 +2810,7 @@ textarea.form-control-lg {
 .input-group:not(.has-validation) > .dropdown-toggle:nth-last-child(n+3) {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
+  z-index: 99;
 }
 .input-group.has-validation > :nth-last-child(n+3):not(.dropdown-toggle):not(.dropdown-menu),
 .input-group.has-validation > .dropdown-toggle:nth-last-child(n+4) {
@@ -4064,6 +4066,17 @@ textarea.form-control-lg {
   align-items: center;
   justify-content: space-between;
 }
+.navbar-brand-logo {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    color: #FFF;
+    font-size: 2.5rem;
+    padding-top: 0.1rem;
+    padding-bottom: 0.6rem;
+    white-space: nowrap;
+    text-decoration: none;
+    padding-right: 10px;
+}
 .navbar-brand {
   padding-top: 0.3125rem;
   padding-bottom: 0.3125rem;
@@ -4523,6 +4536,10 @@ textarea.form-control-lg {
   color: #fff;
 }
 
+
+#card-blk-title {
+    color: #000;
+}
 .card {
   position: relative;
   display: flex;
@@ -6870,7 +6887,7 @@ textarea.form-control-lg {
 }
 
 .border-top {
-  border-top: 1px solid #dee2e6 !important;
+  border-top: 1px solid #686868 !important;
 }
 
 .border-top-0 {
@@ -11701,3 +11718,52 @@ body {
   font-size: 0.75rem;
   border-radius: 0.25rem !important;
 }
+
+/*Back to top button*/
+#myBtn {
+color: #fff;
+width: 50px;
+height: 50px;
+background: #a3bd0b;
+position: fixed;
+bottom: 20px;
+right: 30px;
+z-index: 99;
+line-height: 0px;
+border: 0;
+font-size: 28px;
+text-align: center;
+border-radius: 5px;
+}
+
+#myBtn:hover {
+  color: #555;
+}
+
+/*Styling of tags*/
+.tag {
+    display: inline-block;
+   
+   
+}
+/*End - Back to top button*/
+
+#image-list::-webkit-scrollbar {
+    width: 20px;
+    height: 12px;
+}
+
+#image-list::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 10px #212529;
+    border-radius: 5px;
+}
+
+#image-list::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background: #343539;
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}
+
+    #image-list::-webkit-scrollbar-thumb:hover {
+        background: #4d4d4a;
+    }

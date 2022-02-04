@@ -97,16 +97,16 @@ namespace YogaMockUp.Services
 
         public void SeedStuff() // do not use async here, or else it doesn't work
         {
-            Customer cust = new Customer
-            {
-                FirstName = "Bob",
-                LastName = "Bobsson",
-                Address = "worldaddress",
-                City = "worldCity",
-                ZipCode = "12345",
-                Email = "Bobbybob@email.com",
-                UserName = "BobbytheBussySlayer"
-            };
+            //Customer cust = new Customer
+            //{
+            //    FirstName = "Bob",
+            //    LastName = "Bobsson",
+            //    Address = "worldaddress",
+            //    City = "worldCity",
+            //    ZipCode = "12345",
+            //    Email = "Bobbybob@email.com",
+            //    UserName = "BobbytheBussySlayer"
+            //};
             
             
 
@@ -129,7 +129,7 @@ namespace YogaMockUp.Services
 
             CreateCourse(c1);
             CreateCourse(c2);
-            CreateCustomer(cust);
+            //CreateCustomer(cust);
             //await _CustomerManager.CreateAsync(cust, "123Asd");
             //await _CustomerManager.AddToRoleAsync(cust, "Customer");
 
