@@ -21,7 +21,7 @@ namespace YogaMockUp.Models
         [Required]
         public DateTime Date { get; set; } = new DateTime();
 
-        [Required]
+        [Required, DataType(DataType.Currency)]
         public decimal Price { get; set; }
 
         public List<Customer> Customers { get; set; } = new List<Customer>();

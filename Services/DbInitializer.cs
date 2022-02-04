@@ -46,6 +46,7 @@ namespace YogaMockUp.Services
             //if true, initializes the database with some sample data
             if (!_db.Roles.Any())
             {
+                await CreateRoleAsync("Superadmin");
                 await CreateRoleAsync("Admin");
                 await CreateRoleAsync("User");
                 await CreateRoleAsync("Teacher");
@@ -65,6 +66,21 @@ namespace YogaMockUp.Services
                 var result = await _userManager.CreateAsync(user, "123Asd@1");
                 if (result.Succeeded)
                 {
+                    await _userManager.AddToRoleAsync(user, "Superadmin");
+                }
+            }
+            if (_userManager.FindByEmailAsync("admin@email.com").Result == null)
+            {
+                var user = new ApplicationUser
+                {
+                    FirstName = "Admin",
+                    LastName = "adminson",
+                    UserName = "admin@email.com",
+                    Email = "admin@email.com",
+                };
+                var result = await _userManager.CreateAsync(user, "123Asd@1");
+                if (result.Succeeded)
+                {
                     await _userManager.AddToRoleAsync(user, "Admin");
                 }
             }
@@ -73,7 +89,7 @@ namespace YogaMockUp.Services
                 var user = new ApplicationUser
                 {
                     FirstName = "User",
-                    LastName = "carsson",
+                    LastName = "userson",
                     UserName = "user@email.com",
                     Email = "user@email.com",
                 };
