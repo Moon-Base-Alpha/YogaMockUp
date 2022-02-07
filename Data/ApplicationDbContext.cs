@@ -9,17 +9,13 @@ namespace YogaMockUp.Data
 {
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
-        public ApplicationDbContext()
-        {
-
-        }
 
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {
         }
         public DbSet<Course> Courses { get; set; }
-        public DbSet<Customer> Customers { get; set; }
-        public DbSet<Teacher> Teachers { get; set; }
+        public DbSet<ApplicationUser> SiteUsers { get; set; }
+
     }
 }

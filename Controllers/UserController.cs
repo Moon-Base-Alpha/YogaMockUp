@@ -3,17 +3,17 @@ using YogaMockUp.Services;
 
 namespace YogaMockUp.Controllers
 {
-    public class CustomerController : Controller
+    public class UserController : Controller
     {
         private readonly IGlobalServices _GlobalServices;
-        public CustomerController(IGlobalServices globalServices)
+        public UserController(IGlobalServices globalServices)
         {
             _GlobalServices = globalServices;
         }
         public IActionResult Index()
         {
-            var temp1 = _GlobalServices.GetAllCustomersForCourse(1);
-            var temp2 = _GlobalServices.GetAllCoursesForCustomer(1);
+            var temp1 = _GlobalServices.GetAllUsersForCourse(1);
+            var temp2 = _GlobalServices.GetAllCoursesForUser(1);
             return View();
         }
     }

@@ -15,8 +15,8 @@
     <link rel="stylesheet" href="~/css/site.css" />
 
 </head>
-<body>
-    <div id="mandala" class="mandala">
+<body  style="background-color:rgba(255,165,0,0.1)">
+    <div id="mandala" class="mandala" >
     @*<button onclick="topFunction()" id="myBtn" title="Back to top"><i class="fas fa-arrow-alt-circle-up"></i></button>  *@
         <div>
             <header class="bg-transparent">
@@ -34,9 +34,12 @@
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="CarouselEx">CarouselEx</a>
-                                    </li>
+                                    </li>                                    
                                     <li class="nav-item">
                                         <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link text-dark" asp-area="" asp-controller="AdminFunctions" asp-action="GetAllCourses">List all courses</a>
                                     </li>
                                 </ul>
                                 <partial name="_LoginPartial" />
