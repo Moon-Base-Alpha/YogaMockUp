@@ -28,7 +28,19 @@ namespace YogaMockUp.Controllers
 
         public IActionResult Index()
         {
+            //_globalServices.SeedStuff();
             return View();
+
+            //var signedIn = _signInManager.IsSignedIn(User);
+            
+            //if (!signedIn)
+            //{
+            //    return View();
+            //}
+            //else
+            //{
+            //    return RedirectToAction("Index", "Admin");
+            //}
         }
 
         public IActionResult CarouselEx()
