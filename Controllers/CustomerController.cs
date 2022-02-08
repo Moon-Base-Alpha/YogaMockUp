@@ -15,6 +15,6 @@ namespace YogaMockUp.Controllers
             var temp1 = _GlobalServices.GetAllCustomersForCourse(1);
             var temp2 = _GlobalServices.GetAllCoursesForCustomer(1);
             return View();
-        }
+        }   
     }
 }
