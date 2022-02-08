@@ -20,8 +20,8 @@
                 <th>Address</th>
                 <th>City</th>
                 <th>Zip code</th>
-                <th>Actions</th>
                 <th>Roles</th>
+                <th>Actions</th>
             </tr>
         </thead>
         <tbody>
@@ -45,7 +45,7 @@
                                 <li><a class="dropdown-item" asp-controller="ManageUsers" asp-action="Edit" asp-route-userId="@user.UserId"><i class="fas fa-edit"></i> Edit</a></li>
                                 <li><a class="dropdown-item" asp-controller="ManageUsers" asp-action="Manage" asp-route-userId="@user.UserId"><i class="fas fa-users"></i> Manage Roles</a></li>
                                 <li><a class="dropdown-item" asp-controller="ManageUsers" asp-action="Delete" asp-route-userId="@user.UserId" 
-                                     onclick="return confirm('Are you sure you want to delete @user.UserName?')"><i class="fa fa-trash"></i> Delete</a></li>
+                                     onclick="return confirm('Are you sure you want to delete @user.FirstName @user.LastName?')"><i class="fa fa-trash"></i> Delete</a></li>
                             </ul>
                         </div>
                     </td>
