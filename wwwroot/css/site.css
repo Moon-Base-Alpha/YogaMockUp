@@ -92,7 +92,7 @@ body {
 
 
 /*for Login tab control*/
-div.login-logout-tab div.card-header {
+/*div.login-logout-tab div.card-header {
     padding: 0px 0px 12px 0px;
 }
 
@@ -112,17 +112,17 @@ div.login-logout-tab a.nav-link {
 
 div.card-content {
     padding: 10px 20px;
-}
+}*/
 
 /*login form*/
-div.login-form-icon {
+/*div.login-form-icon {
     text-align: center;
-}
+}*/
 
 /*End for Login tab control*/
 
 /*  CSS for tag function */ 
-*,
+/**,
 ::after,
 ::before {
     box-sizing: border-box;
@@ -135,10 +135,10 @@ div.login-form-icon {
     height: 40px;
 }
 
-    .keyHandler > button {
+    .keyHandler > button {*/
        /* display: inline-flex;
         align-items: center;*/
-        float: left;
+        /*float: left;
         height: 100%;
         width: 40px;
         border: none;
@@ -196,7 +196,7 @@ div.login-form-icon {
             line-height: .5;
             margin: auto;
             font-size: 17pt;
-        }
+        }*/
 /*  END CSS for tag function  */
 
 /* Orange frame around the body */

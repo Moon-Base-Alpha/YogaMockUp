@@ -1,0 +1,23 @@
+﻿@model YogaMockUp.Models.Course
+
+@{
+    ViewData["Title"] = "Course details";
+    Layout = "~/Views/Admin/_AdminLayout.cshtml";
+}
+
+
+<div class="container-fluid px-4">
+    <br />
+    <h1>Course details</h1>
+    <hr />
+    <h3>@Model.CourseName</h3>
+    @*<span style="font-weight:500">ID: </span>@Html.DisplayFor(Model => Model.Id)<br />*@
+    <span style="font-weight:500">Description: </span>@Html.DisplayFor(Model => Model.Description)<br />
+    <span style="font-weight:500">Location: </span>@Html.DisplayFor(Model => Model.Location)<br />
+    <span style="font-weight:500">Date: </span>@Html.DisplayFor(Model => Model.Date)<br />
+    <span style="font-weight:500">Price: </span>@Html.DisplayFor(Model => Model.Price)<br />
+    <div>
+        <hr />
+        <a asp-action="GetAllCourses" class="btn btn-secondary">Back to course list</a>
+    </div>
+</div>

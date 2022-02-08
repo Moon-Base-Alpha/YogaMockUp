@@ -28,7 +28,7 @@ namespace YogaMockUp.Services
         public bool CreateCourse(Course c)
         {
             _db.Courses.Add(c);
-            _db.SaveChangesAsync(); // this function is made manually in alphablogging, maybe needed?
+            //_db.SaveChangesAsync(); // this function is made manually in alphablogging, maybe needed?
             return true;
         }
 
@@ -52,7 +52,7 @@ namespace YogaMockUp.Services
             var CfromDB = _db.Courses.Find(CfromForm.Id);
             //Fetches the current stored data from the database
 
-            CfromDB.Description = CfromForm.Description;
+            CfromDB.Id = CfromForm.Id;
             CfromDB.CourseName = CfromForm.CourseName;
             CfromDB.Description = CfromForm.Description;
             CfromDB.Location = CfromForm.Location;
@@ -64,11 +64,12 @@ namespace YogaMockUp.Services
 
             _db.Update(CfromDB);
             _db.SaveChangesAsync();
-        
-
         }
 
-
+        public async void DeleteCourse(int id)
+        {
+            _db.Courses.Remove(GetCourse(id));
+        }
 
 
 
@@ -102,6 +103,15 @@ namespace YogaMockUp.Services
         {
             var result = _db.Users.Find(Id);
             return result;
+        }
+
+        public async Task<bool> SaveChangesAsync()
+        {
+            if (await _db.SaveChangesAsync() > 0)
+            {
+                return true;
+            }
+            return false;
         }
     }
 }

@@ -12,7 +12,8 @@ namespace YogaMockUp.Services
         public ApplicationUser GetUser(int Id);
         public Course GetCourse(int Id);
         public List<Course> GetAllCourses();
-
+        Task<bool> SaveChangesAsync();
+        public void DeleteCourse(int id);
 
         //SETS
         public bool CreateUser(ApplicationUser x);
@@ -20,6 +21,7 @@ namespace YogaMockUp.Services
         public bool CreateSpecialEvent();
         //public bool SeedStuff();
         public void UpdateCourse(Course course);
+
 
     }
 }
