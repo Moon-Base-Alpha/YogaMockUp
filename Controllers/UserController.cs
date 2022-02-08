@@ -12,8 +12,7 @@ namespace YogaMockUp.Controllers
         }
         public IActionResult Index()
         {
-            var temp1 = _GlobalServices.GetAllUsersForCourse(1);
-            var temp2 = _GlobalServices.GetAllCoursesForUser(1);
+
             return View();
         }
     }
