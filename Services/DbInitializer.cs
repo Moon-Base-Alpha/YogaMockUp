@@ -103,7 +103,7 @@ namespace YogaMockUp.Services
                 var result = await _userManager.CreateAsync(user, "123Asd@1");
                 if (result.Succeeded)
                 {
-                    await _userManager.AddToRoleAsync(user, "User");
+                    await _userManager.AddToRoleAsync(user, "Student");
                 }
             }
             if (_userManager.FindByEmailAsync("teacher@email.com").Result == null)
@@ -157,7 +157,7 @@ namespace YogaMockUp.Services
                 var result = await _userManager.CreateAsync(user, "123Asd@1");
                 if (result.Succeeded)
                 {
-                    await _userManager.AddToRoleAsync(user, "User");
+                    await _userManager.AddToRoleAsync(user, "Student");
                 }
 
             }
@@ -239,7 +239,6 @@ namespace YogaMockUp.Services
 
                 _db.SaveChanges();
             }
-
 
         }
     }

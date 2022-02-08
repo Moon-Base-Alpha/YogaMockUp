@@ -66,24 +66,40 @@ namespace YogaMockUp.Services
             _db.SaveChangesAsync();
         }
 
-        public async void DeleteCourse(int id)
+        public void DeleteCourse(int id)
         {
             _db.Courses.Remove(GetCourse(id));
         }
 
-
+        public void MatchCourseWithUser(Course course, ApplicationUser user)
+        {
+            course.Users.Add(user);
+            user.Courses.Add(course);
+            _db.SaveChangesAsync();
+        }
 
         //--------------GETS--------------//
-        public List<Course> GetAllCoursesForUser(int Id)
+        public List<Course> GetAllCoursesForUser(string Id)
         {
-            var coursesInUser = _db.Users.Find(Id).Courses;
-            return coursesInUser;
+            var user = _db.Users.Find(Id);
+            List<Course> courses = new List<Course>();
+
+            foreach (var item in user.Courses)
+            {
+                courses.Add(item);
+            }
+            return courses;
         }
 
         public List<ApplicationUser> GetAllUsersForCourse(int Id)
         {
-            var UsersInCourse = _db.Courses.Find(Id).Users;
-            return UsersInCourse;
+            var course = _db.Courses.Find(Id);
+            List<ApplicationUser> users = new List<ApplicationUser>();
+            foreach (var item in course.Users)
+            {
+                users.Add(item);
+            }
+            return users;
         }
 
         public Course GetCourse(int Id)
@@ -99,7 +115,7 @@ namespace YogaMockUp.Services
             return result;
         }
 
-        public ApplicationUser GetUser(int Id)
+        public ApplicationUser GetUser(string Id)
         {
             var result = _db.Users.Find(Id);
             return result;
