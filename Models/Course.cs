@@ -8,7 +8,7 @@ namespace YogaMockUp.Models
     {
         public int Id { get; set; }
 
-        [Required, StringLength(100)]
+        [Required, StringLength(100), Display(Name = "Course Name")]
         public string CourseName { get; set; } = string.Empty;
 
         //[Required, StringLength(500)]
