@@ -1,18 +1,10 @@
 ﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
 
-/*a.navbar-brand {
-  white-space: normal;
-  text-align: center;
-  word-break: break-all;
-}*/
-
-/* Provide sufficient contrast against white background */
-/*a {
-  color: #0366d6;
-}*/
+/* Navbar style for active and non-active links */
 
 
+/*
 .btn-primary {
   color: #fff;
   background-color: #AF4D9D;
@@ -43,12 +35,10 @@ for details on configuring this project to bundle and minify static web assets. 
   background-color: #AF4D9D;
   border-color: #AF4D9D;
 }
-
+*/
 /* Sticky footer styles
 -------------------------------------------------- */
-html {
-  font-size: 14px;
-}
+
 @media (min-width: 768px) {
   html {
     font-size: 16px;
@@ -71,24 +61,53 @@ button.accept-policy {
   line-height: inherit;
 }
 
-/* Sticky footer styles
--------------------------------------------------- */
-html {
-  position: relative;
-  min-height: 100%;
+/* Mandala background*/
+.mandala {
+    background-image: url(/images/mandala6.jpg);
+    background-size: cover;
+    background-position: 60% 70%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 1000px;
+    position: relative;
 }
 
+html {
+    position: relative;
+    min-height: 100%;
+    font-size: 14px;
+}
+
+/* Orange frame around the body */
 body {
-  /* Margin bottom by footer height */
-  margin-bottom: 60px;
+    padding: 5px;
+    margin-bottom: 60px;
+    background-color: orange;
+    color: black;
 }
+
+/* Footer style */
 .footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  white-space: nowrap;
-  line-height: 60px; /* Vertically center the text there */
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    line-height: 60px; /* Vertically center the text there */
+    /*padding: 0.5rem 0.5rem 0.5rem 0.5rem;*/
+    text-align: center;
+    color: white;
+    background-color: #B23992;
+    /*border-top: .05rem solid #e5e5e5;*/
 }
+
+    .footer div {
+        color: white;
+        text-size-adjust: 150%;
+    }
+
+    .footer a {
+        color: yellow;
+    }
 
 
 /*for Login tab control*/
@@ -109,7 +128,7 @@ div.login-logout-tab a.nav-link {
     color: #495057;
     text-align: center;
 }
-
+*/
 div.card-content {
     padding: 10px 20px;
 }*/
@@ -199,65 +218,51 @@ div.card-content {
         }*/
 /*  END CSS for tag function  */
 
-/* Orange frame around the body */
-body {
-    padding:3px;
-    background-color: orange;
-    color: black;
-}
 
-/* Earth background*/
-.mandala {
-    background-image: url(/images/mandala5.jpg);
-    background-size:cover;
-    background-position: 60% 70%;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    min-height: 1000px;
-    position: relative;
-}
+
+
 
 /* Header Parallax Element Style*/
-.paral {
+/*.paral {
     min-height: 600px;
     background-attachment: fixed;
     background-size: cover;
     background-position: 50% 50%;
-}
+}*/
 
     /* Paragrapgh for Parallax Section */
-    .paral p {
+    /*.paral p {
         font-size: 24px;
         color: #f5f5f5;
         text-align: center;
         line-height: 60px;
-    }
+    }*/
 
     /* Heading for Parallax Section */
-    .paral h1 {
+    /*.paral h1 {
         color: rgba(255, 255, 255, 0.8);
         font-size: 60px;
         text-align: center;
         padding-top: 60px;
         line-height: 100px;
-    }
+    }*/
 
 /* Image for Parallax Section */
-.moon {
+/*.moon {
     background-image: url(/images/mandala.jpg);
-    background-position: 0% 0%;
+    background-position: 0% 0%;*/
     /*background-size: 100%;*/
-    background-repeat: no-repeat;
+    /*background-repeat: no-repeat;*/
     /*height: auto;*/
-    position: relative;
-}
+    /*position: relative;
+}*/
 
 /* Add more images for more sections */
 
 /* Remove Bottom Margin from Jumbotron */
-.jumbotron {
+/*.jumbotron {
     margin-bottom: 0;
-}
+}*/
 
 /*Lotus Flower*/
 .lotus {
@@ -272,22 +277,6 @@ body {
     /*border-top: .05rem solid #e5e5e5;*/
 }
 
- /*Footer*/
-.footer {
-    /*padding: 0.5rem 0.5rem 0.5rem 0.5rem;*/
-    text-align: center;
-    color: white;
-    background-color: #B23992;
-    /*border-top: .05rem solid #e5e5e5;*/
-}
-
-.footer div{
-    color:white;
-    text-size-adjust:150%;
-}
-.footer a {
-        color: yellow;
-    }
 
 /*Post styles*/
 .postcontainer {
