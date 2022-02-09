@@ -7,9 +7,9 @@ namespace YogaMockUp.Services
     public interface IGlobalServices
     {
         //GETS
-        public List<Course> GetAllCoursesForUser(int Id);
+        public List<Course> GetAllCoursesForUser(string Id);
         public List<ApplicationUser> GetAllUsersForCourse(int Id);
-        public ApplicationUser GetUser(int Id);
+        public ApplicationUser GetUser(string Id);
         public Course GetCourse(int Id);
         public List<Course> GetAllCourses();
         Task<bool> SaveChangesAsync();
@@ -19,8 +19,9 @@ namespace YogaMockUp.Services
         public bool CreateUser(ApplicationUser x);
         public bool CreateCourse(Course x);
         public bool CreateSpecialEvent();
-        //public bool SeedStuff();
         public void UpdateCourse(Course course);
+        public void MatchCourseWithUser(Course course, ApplicationUser user);
+
 
 
     }

@@ -34,6 +34,10 @@ namespace YogaMockUp.Controllers
                 thisViewModel.FirstName = user.FirstName;
                 thisViewModel.LastName = user.LastName;
                 thisViewModel.UserName = user.UserName;
+                thisViewModel.Phone = user.PhoneNumber;
+                thisViewModel.Address = user.Address;
+                thisViewModel.City = user.City;
+                thisViewModel.ZipCode = user.ZipCode;
                 thisViewModel.Roles = await GetUserRoles(user);
                 userRolesVM.Add(thisViewModel);
             }
@@ -120,6 +124,10 @@ namespace YogaMockUp.Controllers
                 LastName = user.LastName,
                 Email = user.Email,
                 UserName = user.UserName,
+                Phone = user.PhoneNumber,
+                Address = user.Address,
+                City = user.City,
+                ZipCode = user.ZipCode,
             };
             return View(model);
         }
@@ -139,6 +147,10 @@ namespace YogaMockUp.Controllers
                 user.LastName = model.LastName;
                 user.Email = model.Email;
                 user.UserName = model.UserName;
+                user.PhoneNumber = model.Phone;
+                user.Address = model.Address;
+                user.City = model.City;
+                user.ZipCode = model.ZipCode;
 
                 var result = await _userManager.UpdateAsync(user);
 
