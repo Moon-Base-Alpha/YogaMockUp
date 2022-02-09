@@ -43,36 +43,36 @@
         <div>
             <header class="bg-transparent">
 
-                 <nav class="navbar navbar-expand-sm navbar-toggleable-sm alert-light bg-transparent border-bottom box-shadow mb-3 navbar-inverse" role="navigation">
-                  <div class="container-fluid">    
-                    <div class="navbar-header">
-                      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                        <span class="sr-only">Toggle navigation</span>
-                        
-                      </button>
-                     <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"><img src="/images/yoga-logo-500.png" alt="Yoga Logo" width="200" height="40"></a>
-                    </div>    
-                    <div id="navigare" class="collapse navbar-collapse d-sm-inline-flex justify-content-between" id="bs-example-navbar-collapse-1">    
-                      <ul class="nav navbar-nav flex-grow-1">
-                        <li class="menu active">
-                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="menu">
-                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="CarouselEx">CarouselEx</a>
-                        </li>
-                        <li class="menu">
-                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                        <li class="menu">
-                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Contact">Contact</a>
-                        </li>
-                        <li class="menu">
-                            <a class="nav-link" asp-area="" asp-controller="Contact" asp-action="Index">Index</a>
-                        </li>
-                      </ul>  
-                      <partial name="_LoginPartial" />
-                    </div>    
-                  </div>
+                 <nav class="navbar navbar-expand-sm navbar-light bg-transparent border-bottom box-shadow mb-3 navbar-inverse" role="navigation">
+                      <div class="container-fluid">    
+                             <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"><img src="/images/yoga-logo-500.png" alt="Yoga Logo" width="200" height="40"></a>
+                             
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navigare" aria-controls="navigare"
+                                    aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon "></span>
+                            </button>
+                           
+                            <div class="collapse navbar-collapse d-sm-inline-flex justify-content-between" id="navigare">    
+                                  <ul class="navbar-nav">
+                                        <li class="menu active">
+                                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                                        </li>
+                                        <li class="menu">
+                                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="CarouselEx">CarouselEx</a>
+                                        </li>
+                                        <li class="menu">
+                                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                                        </li>
+                                        <li class="menu">
+                                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Contact">Contact</a>
+                                        </li>
+                                        <li class="menu">
+                                            <a class="nav-link" asp-area="" asp-controller="Contact" asp-action="Index">Index</a>
+                                        </li>
+                                  </ul>  
+                              <partial name="_LoginPartial" />
+                            </div>    
+                      </div>
                 </nav>
 
             </header>

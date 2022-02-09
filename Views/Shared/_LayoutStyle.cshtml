@@ -49,17 +49,18 @@
     @*<button onclick="topFunction()" id="myBtn" title="Back to top"><i class="fas fa-arrow-alt-circle-up"></i></button>  *@
         <div>
             <header class="bg-transparent">
-                <nav class="navbar navbar-expand-sm navbar-toggleable-sm alert-light bg-transparent border-bottom box-shadow mb-3">
-                    <div class="container">
-
+                <nav class="navbar navbar-expand-sm navbar-light bg-transparent border-bottom box-shadow mb-3 navbar-inverse" role="navigation">
+                    <div class="container-fluid">
+                            
                             <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"><img src="/images/yoga-logo-v3.png" alt="Yoga Shastra Logo" width="100" height="66"></a>
 
-                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation"
                                     aria-expanded="false" aria-label="Toggle navigation">
-                                <span class="navbar-toggler-icon"></span>
+                                <span class="navbar-toggler-icon "></span>
                             </button>
-                            <div id="navigation" class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                                <ul class="navbar-nav flex-grow-1">
+                            
+                            <div class="collapse navbar-collapse  d-sm-inline-flex justify-content-between" id="navigation">
+                                <ul class="navbar-nav">
                                     <li class="nav-item">
                                         <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                                     </li>
