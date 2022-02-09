@@ -19,25 +19,25 @@
 
 
     <style>
-        #navigation .navbar-nav li  {
+        #navigation .navbar-nav > li, #navigation .nav-item .nav-link  {
                 text-transform: capitalize;
-                font-size: 14px;
+                font-size: 24px;
                 color: #B23992;
                 /*background-color: #fff;*/
                 transition: background-color .2s, color .2s;
                 }
 
-        #navigation .navbar-nav li :hover    {
+        #navigation .navbar-nav > li :hover    {
                 background-color: orange;
                 color: #fff;
                 }
 
-        #navigation .navbar-nav li  :focus     {
+        #navigation .navbar-nav > li  :focus     {
                 background-color: orange;
                 color: #fff;   
                 }
 
-        #navigation .navbar-nav li.active  {
+        #navigation .navbar-nav li .active  {
                 background-color: #B23992;
                 color: #fff;
                 }
@@ -51,7 +51,9 @@
             <header class="bg-transparent">
                 <nav class="navbar navbar-expand-sm navbar-toggleable-sm alert-light bg-transparent border-bottom box-shadow mb-3">
                     <div class="container">
+
                             <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"><img src="/images/yoga-logo-v3.png" alt="Yoga Shastra Logo" width="100" height="66"></a>
+
                             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                                     aria-expanded="false" aria-label="Toggle navigation">
                                 <span class="navbar-toggler-icon"></span>
@@ -91,10 +93,13 @@
             </main>
         </div>
 
+        
+        <div class="lotus"><!--Block to center-->
+            <img src="/images/lotus-icon.png" alt="Lotus" width="333" height="99">
+        </div>
+
+
         <footer class="border-top footer text-muted">
-            <div class="lotus">
-                <img src="/images/lotus-icon.png" alt="Lotus" width="333" height="99"></a>
-            </div>
             <div class="container">
                 &copy; 2022 - YogaMockUp - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
             </div>
