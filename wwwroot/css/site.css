@@ -370,3 +370,29 @@ body {
     /*display: block;*/
 }
 
+/*contact page css */
+.dbox .icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #ffc107;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.contact-wrap {
+    background: #fff;
+}
+
+.no-gutters {
+    box-shadow: 0 1rem 3rem rgb(0 0 0 / 10%) !important;
+}
+
+}
+.fa-white {
+    font-size: 17pt !important;
+    color: #fff;
+}
+
+
+
