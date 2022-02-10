@@ -11,6 +11,30 @@ for details on configuring this project to bundle and minify static web assets. 
   }
 }
 
+/* Yoga - Some font styling */
+
+h1 #rubik {
+    font-size: 32px;
+    color: #B23992;
+}
+
+.card-img-overlay {
+    font-size: 20px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+/* Written for h4 tag, modify as required */
+.card-img-overlay .black-outline {
+    -webkit-text-stroke: 1.11px black; /* stroke width and color */
+    color: rgb(255, 255, 255);
+    -webkit-font-smoothing: antialiased;
+    font-weight: bold;
+}
+
+
+
 /* Mandala background*/
 .mandala {
     background-image: url(/images/mandala6.jpg);
@@ -21,6 +45,79 @@ for details on configuring this project to bundle and minify static web assets. 
     min-height: 1000px;
     position: relative;
 }
+
+/* Startpage carousel */
+@media (max-width: 767px) {
+    .carousel-inner .carousel-item > div {
+        display: none;
+    }
+
+        .carousel-inner .carousel-item > div:first-child {
+            display: block;
+        }
+}
+
+.carousel-inner .carousel-item.active,
+.carousel-inner .carousel-item-next,
+.carousel-inner .carousel-item-prev {
+    display: flex;
+}
+
+/* medium and up screens */
+@media (min-width: 768px) {
+
+    .carousel-inner .carousel-item-end.active,
+    .carousel-inner .carousel-item-next {
+        transform: translateX(25%);
+    }
+
+    .carousel-inner .carousel-item-start.active,
+    .carousel-inner .carousel-item-prev {
+        transform: translateX(-25%);
+    }
+}
+
+.carousel-inner .carousel-item-end,
+.carousel-inner .carousel-item-start {
+    transform: translateX(0);
+}
+
+/* Carousel text */
+.card-img-overlay{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight:bolder;
+}
+/* Buttons in carousel */
+.card-img-overlay .button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 2px 1px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.card-img-overlay .button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+}
+
+    .card-img-overlay .button:hover {
+        background-color: white;
+        color: black;
+        border: 2px solid #4CAF50;
+        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+    }
+
+
+/* End of Homepage carousel */
+
 
 html {
     position: relative;
