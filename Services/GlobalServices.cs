@@ -28,7 +28,7 @@ namespace YogaMockUp.Services
         public bool CreateCourse(Course c)
         {
             _db.Courses.Add(c);
-            _db.SaveChangesAsync(); // this function is made manually in alphablogging, maybe needed?
+            //_db.SaveChangesAsync(); // this function is made manually in alphablogging, maybe needed?
             return true;
         }
 
@@ -52,7 +52,7 @@ namespace YogaMockUp.Services
             var CfromDB = _db.Courses.Find(CfromForm.Id);
             //Fetches the current stored data from the database
 
-            CfromDB.Description = CfromForm.Description;
+            CfromDB.Id = CfromForm.Id;
             CfromDB.CourseName = CfromForm.CourseName;
             CfromDB.Description = CfromForm.Description;
             CfromDB.Location = CfromForm.Location;
@@ -64,25 +64,42 @@ namespace YogaMockUp.Services
 
             _db.Update(CfromDB);
             _db.SaveChangesAsync();
-        
-
         }
 
+        public void DeleteCourse(int id)
+        {
+            _db.Courses.Remove(GetCourse(id));
+        }
 
-
-
+        public void MatchCourseWithUser(Course course, ApplicationUser user)
+        {
+            course.Users.Add(user);
+            user.Courses.Add(course);
+            _db.SaveChangesAsync();
+        }
 
         //--------------GETS--------------//
-        public List<Course> GetAllCoursesForUser(int Id)
+        public List<Course> GetAllCoursesForUser(string Id)
         {
-            var coursesInUser = _db.Users.Find(Id).Courses;
-            return coursesInUser;
+            var user = _db.Users.Find(Id);
+            List<Course> courses = new List<Course>();
+
+            foreach (var item in user.Courses)
+            {
+                courses.Add(item);
+            }
+            return courses;
         }
 
         public List<ApplicationUser> GetAllUsersForCourse(int Id)
         {
-            var UsersInCourse = _db.Courses.Find(Id).Users;
-            return UsersInCourse;
+            var course = _db.Courses.Find(Id);
+            List<ApplicationUser> users = new List<ApplicationUser>();
+            foreach (var item in course.Users)
+            {
+                users.Add(item);
+            }
+            return users;
         }
 
         public Course GetCourse(int Id)
@@ -97,11 +114,25 @@ namespace YogaMockUp.Services
 
             return result;
         }
+        public List<Event> GetAllEvents()
+        {
+            var result = _db.Events.ToList();
 
-        public ApplicationUser GetUser(int Id)
+            return result;
+        }
+        public ApplicationUser GetUser(string Id)
         {
             var result = _db.Users.Find(Id);
             return result;
+        }
+
+        public async Task<bool> SaveChangesAsync()
+        {
+            if (await _db.SaveChangesAsync() > 0)
+            {
+                return true;
+            }
+            return false;
         }
     }
 }

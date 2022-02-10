@@ -2,18 +2,18 @@
 
 
 @{
-    ViewData["Title"] = "EditCourseInfo";
+    ViewData["Title"] = "Create course";
     Layout = "~/Views/Admin/_AdminLayout.cshtml";
 }
 
 <div class="container-fluid px-4">
     <br />
-<h1>Edit course</h1>
+<h1>Create course</h1>
 
 <hr />
 @*<script>$var temp = ""</script>*@
         <div class="row col-12">
-            <form asp-action="EditCourseInfo">
+            <form asp-action="CreateCourse">
                 @*<div asp-validation-summary="ModelOnly" class="text-danger"></div>*@
                 <input type="hidden" asp-for="Id" />
                 <div class="form-group">
@@ -54,7 +54,7 @@
                 </div>
             </form>
         </div>
-        @*<div class="col-6 card">
+@*        <div class="col-6 card">
             <br />
             <div><h4>Course discription preview: </h4></div>
             <br />
@@ -63,6 +63,7 @@
     </div>
     <br />
     <br />
+
 @*<script>
     function JSFN_UserChangesDescription()
         {
@@ -84,7 +85,8 @@
 </script>*@
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-      <script src="https://cdn.tiny.cloud/1/qorjxyjl96o0gq6s7ru2at409p4rshto3mfjfq4ihrr8ebdz/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+     
+  <script src="https://cdn.tiny.cloud/1/qorjxyjl96o0gq6s7ru2at409p4rshto3mfjfq4ihrr8ebdz/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
   <script>
     tinymce.init({
       selector: 'textarea',
