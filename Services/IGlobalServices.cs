@@ -12,6 +12,7 @@ namespace YogaMockUp.Services
         public ApplicationUser GetUser(string Id);
         public Course GetCourse(int Id);
         public List<Course> GetAllCourses();
+        public List<Event> GetAllEvents();
         Task<bool> SaveChangesAsync();
         public void DeleteCourse(int id);
 

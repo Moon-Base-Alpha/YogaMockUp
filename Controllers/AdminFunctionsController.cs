@@ -80,5 +80,11 @@ namespace YogaMockUp.Controllers
             var course = _GlobalServices.GetCourse(id);
             return View(course);
         }
+        [HttpGet]
+        public IActionResult EventsList()
+        {
+            var events = _GlobalServices.GetAllEvents();
+            return View(events);
+        }
     }
 }

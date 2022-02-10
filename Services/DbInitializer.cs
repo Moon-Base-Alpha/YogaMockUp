@@ -183,7 +183,7 @@ namespace YogaMockUp.Services
 
             if(!(_db.Courses.Count() > 0))
             {
-                var course = new Course // seeding a course becasue I can't figure out how to do it in DBinitialize
+                var course = new Course 
                 {
                     CourseName = "Beginner’s level 1",
                     Description = "For you who are completely new to hatha yoga or wish to gain a clear knowledge of the " +
@@ -197,7 +197,7 @@ namespace YogaMockUp.Services
                 };
                 _db.Courses.Add(course);
 
-                course = new Course // seeding a course becasue I can't figure out how to do it in DBinitialize
+                course = new Course 
                 {
                     CourseName = "Beginner’s level-2",
                     Description = "For you who have completed a Beginners’ course or already have some understanding of yoga. " +
@@ -212,7 +212,7 @@ namespace YogaMockUp.Services
                 };
                 _db.Courses.Add(course);
 
-                course = new Course // seeding a course becasue I can't figure out how to do it in DBinitialize
+                course = new Course 
                 {
                     CourseName = "Intermediate level",
                     Description = "For you who have completed the beginners level 2′ course or already have practising yoga " +
@@ -225,7 +225,7 @@ namespace YogaMockUp.Services
                 };
                 _db.Courses.Add(course);
 
-                course = new Course // seeding a course becasue I can't figure out how to do it in DBinitialize
+                course = new Course 
                 {
                     CourseName = "Lunchtime yoga",
                     Description = "These classes are suitable for beginners to intermediates. This one-hour classes will help " +
@@ -236,6 +236,26 @@ namespace YogaMockUp.Services
                     Price = 1950
                 };
                 _db.Courses.Add(course);
+
+                var eventvar = new Event
+                {
+                    CourseName = "EventName",
+                    Description = "This is a description for the event",
+                    Location = "the world",
+                    Price = 444
+                };
+                _db.Events.Add(eventvar);
+
+                eventvar = new Event
+                {
+                    CourseName = "EventName2",
+                    Description = "This is another description for the event",
+                    Location = "the world",
+                    Price = 445
+                };
+                _db.Events.Add(eventvar);
+
+
 
                 _db.SaveChanges();
             }
