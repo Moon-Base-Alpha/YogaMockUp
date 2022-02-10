@@ -114,7 +114,12 @@ namespace YogaMockUp.Services
 
             return result;
         }
+        public List<Event> GetAllEvents()
+        {
+            var result = _db.Events.ToList();
 
+            return result;
+        }
         public ApplicationUser GetUser(string Id)
         {
             var result = _db.Users.Find(Id);
