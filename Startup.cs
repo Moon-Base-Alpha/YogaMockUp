@@ -52,6 +52,7 @@ namespace YogaMockUp
 
             // Connecting the services to their interfaces
             services.AddTransient<IGlobalServices, GlobalServices>();
+            services.AddTransient<ITCourseServices, TCourseServices>();
 
             services.AddTransient<IEmailSender, EmailSender>();
 

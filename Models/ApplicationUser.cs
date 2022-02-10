@@ -21,6 +21,8 @@ namespace YogaMockUp.Models
         public string ZipCode { get; set; } = string.Empty;
         public List<Course> Courses { get; set; } = new List<Course>();
 
+        public List<TCourse> Teachertrainings { get; set; } = new List<TCourse>();
+
         public ApplicationUser()
         {
 
