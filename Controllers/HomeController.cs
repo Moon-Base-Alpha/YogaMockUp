@@ -38,7 +38,7 @@ namespace YogaMockUp.Controllers
             return View();
 
             //var signedIn = _signInManager.IsSignedIn(User);
-            
+
             //if (!signedIn)
             //{
             //    return View();
@@ -75,6 +75,22 @@ namespace YogaMockUp.Controllers
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+        [HttpGet]
+        public IActionResult LearnAboutYoga()
+        {
+
+            return View("LearnAboutYoga");
+        }
+        [HttpGet]
+        public IActionResult OurCurrentEvents()
+        {
+            return View("OurCurrentEvents");
+        }
+        [HttpGet]
+        public IActionResult TeacherCertificationCourses()
+        {
+            return View("TeacherCertificationCourses");
         }
     }
 }
