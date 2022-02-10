@@ -54,6 +54,12 @@ namespace YogaMockUp.Controllers
             return View();
         }
 
+        public IActionResult Studentcourses()
+        {
+            return View();
+        }
+
+
         public IActionResult Privacy()
         {
             return View();
