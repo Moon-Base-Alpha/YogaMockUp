@@ -74,3 +74,64 @@ div.login-form-icon {
     background-color: none;
 }
 
+.btn-primary {
+    color: #fff;
+    background-color: #AF4D9D !important;
+    border-color: #AF4D9D !important;
+}
+
+    .btn-primary:hover {
+        color: #fff;
+        background-color: #9f468e !important;
+        border-color: #9f468e !important;
+    }
+
+    .btn-check:focus + .btn-primary, .btn-primary:focus {
+        color: #fff;
+        background-color: #9f468e;
+        border-color: #d7a6ce;
+        box-shadow: 0 0 0 0.25rem rgb(215,166,206, 0.8);
+    }
+
+    .btn-check:checked + .btn-primary, .btn-check:active + .btn-primary, .btn-primary:active, .btn-primary.active, .show > .btn-primary.dropdown-toggle {
+        color: #fff;
+        background-color: #9f468e !important;
+        border-color: #9f468e !important;
+    }
+
+        .btn-check:checked + .btn-primary:focus, .btn-check:active + .btn-primary:focus, .btn-primary:active:focus, .btn-primary.active:focus, .show > .btn-primary.dropdown-toggle:focus {
+            box-shadow: 0 0 0 0.25rem rgb(215,166,206, 0.8) !important;
+        }
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    color: #fff;
+    background-color: #AF4D9D !important;
+    border-color: #AF4D9D !important;
+}
+
+/*contact page css */
+.dbox .icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #ffc107;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.contact-wrap {
+    background: #fff;
+}
+
+/*.no-gutters {
+    box-shadow: 0 1rem 3rem rgb(0 0 0 / 10%) !important;
+}*/
+
+.fa-white {
+    font-size: 17pt !important;
+    color: #fff;
+}
+
+.col-md-12-contact {
+    padding-bottom: 1.2rem !important;
+}
