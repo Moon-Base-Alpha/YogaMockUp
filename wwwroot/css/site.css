@@ -1,195 +1,44 @@
 ﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
 
-/*a.navbar-brand {
-  white-space: normal;
-  text-align: center;
-  word-break: break-all;
-}*/
-
-/* Provide sufficient contrast against white background */
-a {
-  color: #0366d6;
-}
-
-.btn-primary {
-  color: #fff;
-  background-color: #1f457c;
-  border-color: #1f457c;
-}
-
-.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-  color: #fff;
-  background-color: #1f457c;
-  border-color: #1f457c;
-}
 
 /* Sticky footer styles
 -------------------------------------------------- */
-html {
-  font-size: 14px;
-}
+
 @media (min-width: 768px) {
   html {
     font-size: 16px;
   }
 }
 
-.border-top {
-  border-top: 1px solid #e5e5e5;
-}
-.border-bottom {
-  border-bottom: 1px solid #e5e5e5;
+/* Yoga - Some font styling */
+
+h1 #rubik {
+    font-size: 32px;
+    color: #B23992;
 }
 
-.box-shadow {
-  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+.card-img-overlay {
+    font-size: 20px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
-button.accept-policy {
-  font-size: 1rem;
-  line-height: inherit;
-}
-
-/* Sticky footer styles
--------------------------------------------------- */
-html {
-  position: relative;
-  min-height: 100%;
-}
-
-body {
-  /* Margin bottom by footer height */
-  margin-bottom: 60px;
-}
-.footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  white-space: nowrap;
-  line-height: 60px; /* Vertically center the text there */
+/* Written for h4 tag, modify as required */
+.card-img-overlay .black-outline {
+    -webkit-text-stroke: 1.11px black; /* stroke width and color */
+    color: rgb(255, 255, 255);
+    -webkit-font-smoothing: antialiased;
+    font-weight: bold;
 }
 
 
-/*for Login tab control*/
-div.login-logout-tab div.card-header {
-    padding: 0px 0px 12px 0px;
-}
 
-div.login-logout-tab ul.nav-tabs {
-    margin: 0px 0px -12px 0px;
-}
-
-div.login-logout-tab li.nav-item {
-    width: 50%;
-}
-
-div.login-logout-tab a.nav-link {
-    font-size: 25px;
-    color: #495057;
-    text-align: center;
-}
-
-div.card-content {
-    padding: 10px 20px;
-}
-
-/*login form*/
-div.login-form-icon {
-    text-align: center;
-}
-
-/*End for Login tab control*/
-
-/*  CSS for tag function */ 
-*,
-::after,
-::before {
-    box-sizing: border-box;
-
-}
-
-.keyHandler {
-    float: left;
-    width: 250px;
-    height: 40px;
-}
-
-    .keyHandler > button {
-       /* display: inline-flex;
-        align-items: center;*/
-        float: left;
-        height: 100%;
-        width: 40px;
-        border: none;
-        outline: none !important;
-        background: #673AB7;
-        border-radius: 7px;
-        color: white;
-        cursor: pointer;
-        font-size: 26pt;
-        line-height:0;
-        
-    }
-
-    .keyHandler > input {
-        float: left;
-        width: calc(100% - 45px);
-        margin: 0 0 0 5px;
-        height: 38px;
-        padding: 0 14px;
-        background: #ffffff;
-        border: none;
-        outline: none !important;
-        font-family: monospace;
-        border-bottom: 2px solid #673AB7;
-    }
-
-.addedKeysHolder {
-    float: left;
-    width: 100%;
-    height: auto;
-    margin: 8px 0 0 0;
-}
-
-    .addedKeysHolder > span {
-        background: #2196F3;
-        padding: 8px 10px 8px 30px;
-        float: left;
-        margin: 2px;
-        border-radius: 100px;
-        color: white;
-        font-family: monospace;
-        font-size: 12pt;
-        position: relative;
-        cursor: pointer;
-    }
-
-        .addedKeysHolder > span:after {
-            content: "\d7";
-            position: absolute;
-            left: 12px;
-            top: 0;
-            bottom: 0;
-            width: 14px;
-            height: 14px;
-            line-height: .5;
-            margin: auto;
-            font-size: 17pt;
-        }
-/*  END CSS for tag function  */
-
-/* Orange frame around the body */
-body {
-    padding:3px;
-    background-color: orange;
-    color: black;
-}
-
-/* Earth background*/
+/* Mandala background*/
 .mandala {
-    background-image: url(/images/mandala5.jpg);
-    background-size:cover;
+    background-image: url(/images/mandala6.jpg);
+    background-size: cover;
     background-position: 60% 70%;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -197,63 +46,100 @@ body {
     position: relative;
 }
 
-/* Header Parallax Element Style*/
-.paral {
-    min-height: 600px;
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: 50% 50%;
-}
-
-    /* Paragrapgh for Parallax Section */
-    .paral p {
-        font-size: 24px;
-        color: #f5f5f5;
-        text-align: center;
-        line-height: 60px;
+/* Startpage carousel */
+@media (max-width: 767px) {
+    .carousel-inner .carousel-item > div {
+        display: none;
     }
 
-    /* Heading for Parallax Section */
-    .paral h1 {
-        color: rgba(255, 255, 255, 0.8);
-        font-size: 60px;
-        text-align: center;
-        padding-top: 60px;
-        line-height: 100px;
+        .carousel-inner .carousel-item > div:first-child {
+            display: block;
+        }
+}
+
+.carousel-inner .carousel-item.active,
+.carousel-inner .carousel-item-next,
+.carousel-inner .carousel-item-prev {
+    display: flex;
+}
+
+/* medium and up screens */
+@media (min-width: 768px) {
+
+    .carousel-inner .carousel-item-end.active,
+    .carousel-inner .carousel-item-next {
+        transform: translateX(25%);
     }
 
-/* Image for Parallax Section */
-.moon {
-    background-image: url(/images/mandala.jpg);
-    background-position: 0% 0%;
-    /*background-size: 100%;*/
-    background-repeat: no-repeat;
-    /*height: auto;*/
-    position: relative;
+    .carousel-inner .carousel-item-start.active,
+    .carousel-inner .carousel-item-prev {
+        transform: translateX(-25%);
+    }
 }
 
-/* Add more images for more sections */
-
-/* Remove Bottom Margin from Jumbotron */
-.jumbotron {
-    margin-bottom: 0;
+.carousel-inner .carousel-item-end,
+.carousel-inner .carousel-item-start {
+    transform: translateX(0);
 }
 
-/*Lotus Flower*/
-.lotus {
-    /*padding: 0.5rem 0.5rem 0.5rem 0.5rem;*/
-    position: absolute;
-    bottom: 60px;
+/* Carousel text */
+.card-img-overlay{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight:bolder;
+}
+/* Buttons in carousel */
+.card-img-overlay .button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 8px 16px;
     text-align: center;
-    left: 42%;
-    /*transform: translate(-50%,-50%%);*/
-    /*color: white;*/
-    background-color: none;
-    /*border-top: .05rem solid #e5e5e5;*/
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 2px 1px;
+    transition-duration: 0.4s;
+    cursor: pointer;
 }
 
- /*Footer*/
+.card-img-overlay .button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+}
+
+    .card-img-overlay .button:hover {
+        background-color: white;
+        color: black;
+        border: 2px solid #4CAF50;
+        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+    }
+
+
+/* End of Homepage carousel */
+
+
+html {
+    position: relative;
+    min-height: 100%;
+    font-size: 14px;
+}
+
+/* Orange frame around the body */
+body {
+    padding: 7px;
+    margin-bottom: 60px;
+    background-color: #febf10;
+    color: black;
+}
+
+/* Footer style */
 .footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    line-height: 60px; /* Vertically center the text there */
     /*padding: 0.5rem 0.5rem 0.5rem 0.5rem;*/
     text-align: center;
     color: white;
@@ -261,92 +147,88 @@ body {
     /*border-top: .05rem solid #e5e5e5;*/
 }
 
-.footer div{
-    color:white;
-    text-size-adjust:150%;
-}
-.footer a {
+    .footer div {
+        color: white;
+        text-size-adjust: 150%;
+    }
+
+    .footer a {
         color: yellow;
     }
 
-/*Post styles*/
-.postcontainer {
-    background-color: rgba(45, 45, 45, 0.7);
-    /*opacity: .4;*/
-}
 
-.postcontainer h1, .postcontainer p {
-        color: lightgray;
-    }
-
-    .postcontainer a {
-        color: steelblue;
-    }
-.created {
-    font-size: 0.7em;
-    font-weight: bold;
-    text-transform: uppercase;
-    margin-bottom: -0.1rem !important;
-    color: gray;
-}
-
-.updated {
-    font-size: 0.7em;
-    text-transform: uppercase;
-    margin-bottom: -0.2rem !important;
-    color: gray;
-}
-
-.comment {
-    background-color: rgba(10, 10, 10, 0.5);
-}
-.comment h1, .comment p {
-        color: lightgray;
+/*login form*/
+div.login-form-icon {
+    text-align: center;
 }
 
 
-.image-radio {
+/*Lotus Flower, using a comment and text-align to center the flower*/
+.lotus {
+    text-align: center;
     display: block;
-    position: relative;
-    padding-left:25px;
-    margin-bottom: 16px;
-    cursor: pointer;
-    font-size: 22px;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-/* HIDE RADIO */
-
-.image-radio input{
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-  /*  width: 0;
-    height: 0;*/
+    bottom: 60px;
+    background-color: none;
 }
 
-    /* IMAGE STYLES */
-.image-radio-img {
-    top: 0;
-    left: 0;
-    cursor: pointer;
-    opacity: 50;
-    height: 216px;
-    width: 384px;
-    margin: 5px;
-    border-radius: 5px;
-}
-/* On mouse-over, add a opacity */
-.image-radio:hover input ~ .image-radio-img {
-    opacity: 100;
-}
-    /* CHECKED STYLES */
-.image-radio input:checked ~ .image-radio-img {
-    outline: 2px solid #0d6efd78;
-    margin: 5px;
-    border-radius: 5px;
-    /*display: block;*/
+.btn-primary {
+    color: #fff;
+    background-color: #AF4D9D !important;
+    border-color: #AF4D9D !important;
 }
 
+    .btn-primary:hover {
+        color: #fff;
+        background-color: #9f468e !important;
+        border-color: #9f468e !important;
+    }
+
+    .btn-check:focus + .btn-primary, .btn-primary:focus {
+        color: #fff;
+        background-color: #9f468e;
+        border-color: #d7a6ce;
+        box-shadow: 0 0 0 0.25rem rgb(215,166,206, 0.8);
+    }
+
+    .btn-check:checked + .btn-primary, .btn-check:active + .btn-primary, .btn-primary:active, .btn-primary.active, .show > .btn-primary.dropdown-toggle {
+        color: #fff;
+        background-color: #9f468e !important;
+        border-color: #9f468e !important;
+    }
+
+        .btn-check:checked + .btn-primary:focus, .btn-check:active + .btn-primary:focus, .btn-primary:active:focus, .btn-primary.active:focus, .show > .btn-primary.dropdown-toggle:focus {
+            box-shadow: 0 0 0 0.25rem rgb(215,166,206, 0.8) !important;
+        }
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    color: #fff;
+    background-color: #AF4D9D !important;
+    border-color: #AF4D9D !important;
+}
+
+/*contact page css */
+.dbox .icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #ffc107;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.contact-wrap {
+    background: #fff;
+}
+
+/*.no-gutters {
+    box-shadow: 0 1rem 3rem rgb(0 0 0 / 10%) !important;
+}*/
+
+.fa-white {
+    font-size: 17pt !important;
+    color: #fff;
+}
+
+.col-md-12-contact {
+    padding-bottom: 1.2rem !important;
+}

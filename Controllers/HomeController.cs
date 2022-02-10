@@ -28,8 +28,25 @@ namespace YogaMockUp.Controllers
 
         public IActionResult Index()
         {
-             //_globalServices.SeedStuff();
+            //var course = _globalServices.GetCourse(1);
+            //var user = _globalServices.GetUser("be760656-941d-4948-825a-f6b09ed1c2ce");
+            //_globalServices.MatchCourseWithUser(course, user);
+
+            //var temp1 = _globalServices.GetAllUsersForCourse(1);
+            //var temp2 = _globalServices.GetAllCoursesForUser("be760656-941d-4948-825a-f6b09ed1c2ce");
+
             return View();
+
+            //var signedIn = _signInManager.IsSignedIn(User);
+            
+            //if (!signedIn)
+            //{
+            //    return View();
+            //}
+            //else
+            //{
+            //    return RedirectToAction("Index", "Admin");
+            //}
         }
 
         public IActionResult CarouselEx()
@@ -44,6 +61,11 @@ namespace YogaMockUp.Controllers
 
 
         public IActionResult Privacy()
+        {
+            return View();
+        }
+
+        public IActionResult Contact()
         {
             return View();
         }

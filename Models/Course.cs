@@ -1,18 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace YogaMockUp.Models
 {
     public class Course
     {
         public int Id { get; set; }
-        public int CustomerId { get; set; }
 
-        [Required, StringLength(100)]
+        [Required, StringLength(100), Display(Name = "Course Name")]
         public string CourseName { get; set; } = string.Empty;
 
-        [Required, StringLength(500)]
+        //[Required, StringLength(500)]
         public string Description { get; set; } = string.Empty;
 
         [Required, StringLength(50)]
@@ -21,13 +21,15 @@ namespace YogaMockUp.Models
         [Required]
         public DateTime Date { get; set; } = new DateTime();
 
-        [Required, DataType(DataType.Currency)]
+        [Required, DataType(DataType.Currency), Column(TypeName = "decimal(10,0)")]
         public decimal Price { get; set; }
 
-        public List<Customer> Customers { get; set; } = new List<Customer>();
+        public List<ApplicationUser> Users { get; set; } = new List<ApplicationUser>();
         public Course()
         {
 
         }
+
+       
     }
 }

@@ -62,6 +62,10 @@ namespace YogaMockUp.Services
                     LastName = "Dayakar",
                     UserName = "rajesh@email.com",
                     Email = "rajesh@email.com",
+                    Address = "WorldstreetAddress",
+                    City = "WorldCity",
+                    ZipCode = "12345",
+                    
                 };
                 var result = await _userManager.CreateAsync(user, "123Asd@1");
                 if (result.Succeeded)
@@ -92,11 +96,14 @@ namespace YogaMockUp.Services
                     LastName = "userson",
                     UserName = "user@email.com",
                     Email = "user@email.com",
+                    Address = "WorldstreetAddress",
+                    City = "WorldCity",
+                    ZipCode = "12345",
                 };
                 var result = await _userManager.CreateAsync(user, "123Asd@1");
                 if (result.Succeeded)
                 {
-                    await _userManager.AddToRoleAsync(user, "User");
+                    await _userManager.AddToRoleAsync(user, "Student");
                 }
             }
             if (_userManager.FindByEmailAsync("teacher@email.com").Result == null)
@@ -107,6 +114,9 @@ namespace YogaMockUp.Services
                     LastName = "Andersson",
                     UserName = "teacher@email.com",
                     Email = "teacher@email.com",
+                    Address = "WorldstreetAddress",
+                    City = "WorldCity",
+                    ZipCode = "12345",
                 };
                 var result = await _userManager.CreateAsync(user, "123Asd@1");
                 if (result.Succeeded)
@@ -122,6 +132,9 @@ namespace YogaMockUp.Services
                     LastName = "Andersson",
                     UserName = "neo@email.com",
                     Email = "neo@email.com",
+                    Address = "WorldstreetAddress",
+                    City = "WorldCity",
+                    ZipCode = "12345",
                 };
                 var result = await _userManager.CreateAsync(user, "123Asd@1");
                 if (result.Succeeded)
@@ -137,11 +150,14 @@ namespace YogaMockUp.Services
                     LastName = "Lisa",
                     UserName = "lisa@email.com",
                     Email = "lisa@email.com",
+                    Address = "WorldstreetAddress",
+                    City = "WorldCity",
+                    ZipCode = "12345",
                 };
                 var result = await _userManager.CreateAsync(user, "123Asd@1");
                 if (result.Succeeded)
                 {
-                    await _userManager.AddToRoleAsync(user, "User");
+                    await _userManager.AddToRoleAsync(user, "Student");
                 }
 
             }
@@ -153,6 +169,9 @@ namespace YogaMockUp.Services
                     LastName = "Parker",
                     UserName = "peter@email.com",
                     Email = "peter@email.com",
+                    Address = "WorldstreetAddress",
+                    City = "WorldCity",
+                    ZipCode = "12345",
                 };
                 var result = await _userManager.CreateAsync(user, "123Asd@1");
                 if (result.Succeeded)
@@ -161,6 +180,66 @@ namespace YogaMockUp.Services
                 }
             }
             // End seed users //
+
+            if(!(_db.Courses.Count() > 0))
+            {
+                var course = new Course // seeding a course becasue I can't figure out how to do it in DBinitialize
+                {
+                    CourseName = "Beginner’s level 1",
+                    Description = "For you who are completely new to hatha yoga or wish to gain a clear knowledge of the " +
+                    "fundamental principles of hatha yoga. We will have an extra focus on gentle stretching and relaxation " +
+                    "for body and mind. During the course, you will be introduced to new asanas and yogic breathing techniques " +
+                    "along with their benefits, counter-indications and proper technique. After the course, you will know the " +
+                    "basic asanas of a Sivananda class, Surya Namaskar, Pranayama (breathing techniques) and proper relaxation.",
+                    Location = "Storgatan 70, Linköping",
+                    Date = System.DateTime.Now,
+                    Price = 2400
+                };
+                _db.Courses.Add(course);
+
+                course = new Course // seeding a course becasue I can't figure out how to do it in DBinitialize
+                {
+                    CourseName = "Beginner’s level-2",
+                    Description = "For you who have completed a Beginners’ course or already have some understanding of yoga. " +
+                    "During the course, you will gain a clear knowledge of the fundamental principles of hatha yoga and be " +
+                    "introduced to new asanas and yogic breathing techniques along with their benefits, counter-indications " +
+                    "and proper technique. After the course, you will know the basic asanas of a Sivananda class, Surya Namaskar, " +
+                    "Pranayama (breathing techniques) and proper relaxation. In this course, you will be given the opportunity " +
+                    "to start practising the headstand – Sirshasana",
+                    Location = "Storgatan 70, Linköping",
+                    Date = System.DateTime.Now,
+                    Price = 2400
+                };
+                _db.Courses.Add(course);
+
+                course = new Course // seeding a course becasue I can't figure out how to do it in DBinitialize
+                {
+                    CourseName = "Intermediate level",
+                    Description = "For you who have completed the beginners level 2′ course or already have practising yoga " +
+                    "for some time. You will learn new variations and new asanas along with deepening your practice of the basic " +
+                    "postures. We will continue to practice the headstand – Sirhasana. More focus on holding the postures " +
+                    "comfortably for a long time while being aware of your thoughts and breathing. ",
+                    Location = "Storgatan 70, Linköping",
+                    Date = System.DateTime.Now,
+                    Price = 2400
+                };
+                _db.Courses.Add(course);
+
+                course = new Course // seeding a course becasue I can't figure out how to do it in DBinitialize
+                {
+                    CourseName = "Lunchtime yoga",
+                    Description = "These classes are suitable for beginners to intermediates. This one-hour classes will help " +
+                    "to reduce stress, alleviate pain and tension in the neck and lower back areas, ease out stiff joints, " +
+                    "stretch out tight muscles, reduce fatigue and induce relaxation process.",
+                    Location = "Storgatan 70, Linköping",
+                    Date = System.DateTime.Now,
+                    Price = 1950
+                };
+                _db.Courses.Add(course);
+
+                _db.SaveChanges();
+            }
+
         }
     }
 }
