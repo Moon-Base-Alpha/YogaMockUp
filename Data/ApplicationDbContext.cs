@@ -17,5 +17,6 @@ namespace YogaMockUp.Data
         public DbSet<Course> Courses { get; set; }
         public DbSet<ApplicationUser> SiteUsers { get; set; }
 
+        public DbSet<Contact> Contacts { get; set; }
     }
 }
