@@ -81,6 +81,9 @@ namespace YogaMockUp.Services
                     LastName = "adminson",
                     UserName = "admin@email.com",
                     Email = "admin@email.com",
+                    Address= "Lexicon",
+                    City= "Linkoping",
+                    ZipCode= "12345",
                 };
                 var result = await _userManager.CreateAsync(user, "123Asd@1");
                 if (result.Succeeded)

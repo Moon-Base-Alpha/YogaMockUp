@@ -51,6 +51,7 @@ namespace YogaMockUp
 
             // Connecting the services to their interfaces
             services.AddTransient<IGlobalServices, GlobalServices>();
+            services.AddTransient<ITCourseServices, TCourseServices>();
 
             //Adding DbInitializer Service
             services.AddAsyncInitializer<DbInitializer>();
