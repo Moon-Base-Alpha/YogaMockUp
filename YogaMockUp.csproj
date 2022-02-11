@@ -24,7 +24,18 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="wwwroot\images\AboutYoga\" />
     <Folder Include="wwwroot\logo\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\images\YogaMiscServices\Abhyangam1.jpg" />
+    <None Include="wwwroot\images\YogaMiscServices\cropped-yoga-logo.png" />
+    <None Include="wwwroot\images\YogaMiscServices\deep.jpg" />
+    <None Include="wwwroot\images\YogaMiscServices\footmassage.jpg" />
+    <None Include="wwwroot\images\YogaMiscServices\indian-Head-Massage-1.jpg" />
+    <None Include="wwwroot\images\YogaMiscServices\neck.jpg" />
+    <None Include="wwwroot\images\YogaMiscServices\No.09.jpg" />
   </ItemGroup>
 
 </Project>
