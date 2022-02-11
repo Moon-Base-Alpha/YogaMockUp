@@ -12,7 +12,9 @@ for details on configuring this project to bundle and minify static web assets. 
 }
 
 /* Yoga - Some font styling */
-
+.nav-item {
+    padding-left:20px;
+}
 #rubik{
     text-align:center;
     font-size: 50px;
