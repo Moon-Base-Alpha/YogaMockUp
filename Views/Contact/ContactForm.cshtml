@@ -4,11 +4,6 @@
     ViewData["Title"] = "Contact us";
 }
 
-@if(ViewBag.ConfirmMsg != null)
-{
-    <div class="alert alert-success">@ViewBag.ConfirmMsg</div>
-}
-
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-6 text-center mb-5">
@@ -64,11 +59,11 @@
                             <div class="col-md-7">
                                 <div class="contact-wrap w-100 p-md-5 p-4">
                                     <h3 class="mb-4">Send us a message</h3>
-                            @*<div id="form-message-warning" class="mb-4"></div>
-                                <div id="form-message-success" class="mb-4">
-                                Your message was sent, thank you!
-                                </div>*@
-                                    <form method="POST" class="contactForm">
+                            @if(ViewBag.Message != null)
+                                {
+                                <div class="alert alert-success">@ViewBag.Message</div>
+                            }
+                            <form method="POST" class="contactForm">
                                         <input type="hidden" asp-for="Id" />
                                         <div class="row">
                                             <div class="col-md-12-contact">
