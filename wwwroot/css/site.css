@@ -10,6 +10,19 @@ for details on configuring this project to bundle and minify static web assets. 
     font-size: 16px;
   }
 }
+/* The cards used on one page */
+.AYcard {
+    margin: 50px;
+    background-color: rgba(100, 100, 100, 0.1);
+    border-radius: 30px;
+}
+
+.AYcardBody {
+    padding-top: 20px;
+    padding: 20px;
+    text-align: center;
+    font-size: 18px;
+}
 
 /* Yoga - Some font styling */
 .nav-item {
