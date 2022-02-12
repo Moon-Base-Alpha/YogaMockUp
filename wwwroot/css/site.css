@@ -4,6 +4,9 @@ for details on configuring this project to bundle and minify static web assets. 
 
 /* Sticky footer styles
 -------------------------------------------------- */
+p {
+    font-size: 1.15rem;
+}
 
 @media (min-width: 1000px) {
   html {
@@ -146,10 +149,10 @@ html {
 
 /* Orange frame around the body */
 body {
-    padding: 7px;
+/*    padding: 7px;
     margin-bottom: 60px;
     background-color: #febf10;
-    color: black;
+    color: black;*/
 }
 
 /* Footer style */
@@ -251,10 +254,21 @@ div.login-form-icon {
 .col-md-12-contact {
     padding-bottom: 1.2rem !important;
 }
-/*contact page css */
+/*End contact page css */
 
 
 a {
     color: #0d6efd;
     text-decoration: none !important;
 }
+
+/*Special horizontal line*/
+hr.style14 {
+    border: 0;
+    height: 3px;
+    background-image: -webkit-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+    background-image: -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+    background-image: -ms-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+    background-image: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+}
+/*End Special horizontal line*/
