@@ -27,6 +27,14 @@ p {
     font-size: 18px;
 }
 
+/* lotus issues lab space */
+
+#eop{
+    background-color:yellow;
+}
+
+/* End of lotus issues lab space */
+
 /* Yoga - Some font styling */
 .nav-item {
     padding-left:20px;
@@ -157,6 +165,10 @@ body {
 
 /* Footer style */
 .footer {
+    
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -186,12 +198,12 @@ div.login-form-icon {
 
 
 /*Lotus Flower, using a comment and text-align to center the flower*/
-.lotus {
-    text-align: center;
-    display: block;
-    bottom: 60px;
+img #lotus {
+    object-position:50% bottom;
     background-color: none;
 }
+/* End of Lotus Flower style */
+
 
 .btn-primary {
     color: #fff;
@@ -262,6 +274,52 @@ a {
     text-decoration: none !important;
 }
 
+
+/* Tacher Certificate Courses */
+#ttctitle {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #B23992;
+    color: white;
+    padding: 1% 5% 1% 5%;
+}
+
+    #ttctitle img {
+        
+    }
+
+    #whoshouldjoin {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        background-color: #B23992;
+        color: white;
+        padding: 1% 5%;
+    }
+#ttctitle h1 {
+    font-weight: bolder;
+    padding: 1% 5%;
+}
+
+#whoshouldjoin h3 {
+    text-align: center;
+    padding: 1% 5%;
+    font-weight: bolder;
+}
+        #whoshouldjoin h3 p {
+            text-align: center;
+            padding: 1% 5%;
+        }
+
+
+
+#testimonials {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+#courseprep {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* End of Tacher Certificate Courses */
+
 /*Special horizontal line*/
 hr.style14 {
     border: 0;
@@ -272,3 +330,4 @@ hr.style14 {
     background-image: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
 }
 /*End Special horizontal line*/
+
