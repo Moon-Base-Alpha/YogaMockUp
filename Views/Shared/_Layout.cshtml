@@ -23,21 +23,36 @@
         .navbar {
                 border:medium;
             }
-        #navigare > li > a, .navbar-brand,.navbar .navbar-header a,.navbar .dropdown-toggle, .navbar-nav > li > a {
-                color: #000000 !important;
+
+        #navigare > ul > li {
+                color: #000000;
                 font-size:24px;
             }
-        .navbar-inverse .navbar-nav>.open>a,.navbar-inverse .navbar-nav>.open>a:hover,.navbar-inverse .navbar-nav>.open>a:focus{
-                color: #000000 !important;
-                background-color: #ffffff;
+
+        #navigare > ul > li :hover {
+                border: 2px solid #B23992;
+                color: #000;
+                border-radius:8px;
+                background-color: #febf10;
             }
+
+        #navigare > ul > li :focus  {
+                color: #000;
+                border-radius:8px;
+                background-color: #B23992;
+            }
+
         .navbar-inverse {
-                background-image: linear-gradient(to bottom,#febf10, white);
+                background-image: linear-gradient(to left,#febf10, white);
             }
+
     </style>
 
 </head>
-<body  style="background-color:rgba(255,165,0,0.1)">
+
+@* Not Logged in Layout *@
+
+<body  style="background-color:#febf10">
     <div id="mandala" class="mandala" >
     @*<button onclick="topFunction()" id="myBtn" title="Back to top"><i class="fas fa-arrow-alt-circle-up"></i></button>  *@
         <div>
@@ -89,21 +104,15 @@
                 </main>
             </div>
         </div>
-@*        <div class="container">
-            <main role="main" class="pb-3">
-                @RenderBody()
-            </main>
-        </div>*@
-
-        <div class="lotus"><!--Block to center-->
-            <img src="/images/lotus-icon.png" alt="Lotus" width="333" height="99">
-        </div>
+        
+            <img id="lotus" src="/images/lotus-icon.png" alt="Lotus Flower" width="333" height="99">
 
         <footer class="border-top footer text-muted">
             <div class="container">
                 &copy; 2022 - YogaMockUp - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
             </div>
         </footer>
+
     </div>
 
     <script>
