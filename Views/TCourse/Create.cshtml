@@ -2,21 +2,23 @@
 
 @{
     ViewData["Title"] = "Create";
+    Layout = "~/Views/Admin/_AdminLayout.cshtml";
+
 }
 
 <h1>Create</h1>
 
-<h4>Teacher training</h4>
+<h4>Teacher Training Courses</h4>
 <hr />
 <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-6">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
+            @*<div class="form-group">
                 <label asp-for="Id" class="control-label"></label>
                 <input asp-for="Id" class="form-control" />
                 <span asp-validation-for="Id" class="text-danger"></span>
-            </div>
+            </div>*@
             <div class="form-group">
                 <label asp-for="CourseName" class="control-label"></label>
                 <input asp-for="CourseName" class="form-control" />
@@ -24,8 +26,9 @@
             </div>
             <div class="form-group">
                 <label asp-for="Description" class="control-label"></label>
-                <input asp-for="Description" class ="form-control"/>
-                <span asp-validation-for="Description" class="text-danger"></span>
+@*                <input asp-for="Description" class ="form-control"/>
+*@                <span asp-validation-for="Description" class="text-danger"></span>
+                <textarea class = "form-control" col = "200" row="500" asp-for ="Description" style= "height:120px"></textarea>
             </div>
             <div class="form-group">
                 <label asp-for="Location" class="control-label"></label>
@@ -55,4 +58,5 @@
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-}
+
+    }

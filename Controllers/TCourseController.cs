@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
@@ -12,6 +13,7 @@ using YogaMockUp.Services;
 
 namespace YogaMockUp.Controllers
 {
+    [Authorize(Roles = "Superadmin, Admin")]
     public class TCourseController : Controller
     {
         //private readonly SignInManager<ApplicationUser> _signInManager;
@@ -33,6 +35,7 @@ namespace YogaMockUp.Controllers
             return View(_db.TeachersCourse.ToList());
         }
 
+         
         [HttpGet]
         public IActionResult Create ()
         {
@@ -71,35 +74,38 @@ namespace YogaMockUp.Controllers
                 return NotFound();
             }
             return View(a);
-        }
+        }        
+       
         [HttpPost]
         public ActionResult Edit(int Id, TCourse c)
         {
-            if (Id != c.Id)
-            {
-                return NotFound();
-            }
+            //if (Id != c.Id)
+            //{
+            //    return NotFound();
+            //}
 
-            if (ModelState.IsValid)
-            {
-                try
-                {
-                    _db.Update(c);
-                    _db.SaveChanges();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!TCourseExists(c.Id))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
-                return RedirectToAction(nameof(Index));
-            }
+            //if (ModelState.IsValid)
+            //{
+            //    try
+            //    {
+            //        _db.Update(c);
+            //        _db.SaveChanges();
+            //    }
+            //    catch (DbUpdateConcurrencyException)
+            //    {
+            //        if (!TCourseExists(c.Id))
+            //        {
+            //            return NotFound();
+            //        }
+            //        else
+            //        {
+            //            throw;
+            //        }
+            //    }
+            //    return RedirectToAction(nameof(Index));
+            //}
+            _ttServices.UpdateCourse(c);
+            ViewBag.Message = "Course info has been updated successfully.";
             return View(c);
         }
 

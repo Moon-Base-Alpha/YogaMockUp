@@ -48,11 +48,30 @@ namespace YogaMockUp.Services
             var result = _db.TeachersCourse.Find(Id);
 
             return result;
-        }
+        }        
 
-        public void UpdateTCourse(TCourse c)
+        public void Create(Course course)
         {
             throw new System.NotImplementedException();
+        }
+
+        public void UpdateCourse(TCourse c)
+        {
+            var CfromDB = _db.TeachersCourse.Find(c.Id);
+            //Fetches the current stored data from the database
+
+            CfromDB.Id = c.Id;
+            CfromDB.CourseName = c.CourseName;
+            CfromDB.Description = c.Description;
+            CfromDB.Location = c.Location;
+            CfromDB.Date = c.Date;
+            CfromDB.Price = c.Price;
+            //the above just replaces the old values with
+            //the new ones from the form, regardless if
+            //they're identical or not
+
+            _db.Update(CfromDB);
+            _db.SaveChangesAsync();
         }
     }
 }
