@@ -346,3 +346,8 @@ hr.style14 {
 }
 /*End Special horizontal line*/
 
+/*image responsive*/
+.responsive {
+    width: 100%;
+    height: auto;
+}
