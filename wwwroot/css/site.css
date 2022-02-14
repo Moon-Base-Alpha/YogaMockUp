@@ -165,11 +165,11 @@ body {
 
 /* Footer style */
 .footer {
-    
     display: block;
     margin-left: auto;
     margin-right: auto;
-    position: fixed;
+    /*margin-top: 50px;*/
+    /*position: fixed;*/
     bottom: 0;
     width: 100%;
     white-space: nowrap;
@@ -198,10 +198,21 @@ div.login-form-icon {
 
 
 /*Lotus Flower, using a comment and text-align to center the flower*/
-img #lotus {
+/*img #lotus {
     object-position:50% bottom;
     background-color: none;
+}*/
+
+div.fixed {
+    position: unset;
+    padding-top: 50px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: none;
+    text-align: center;
 }
+
 /* End of Lotus Flower style */
 
 
