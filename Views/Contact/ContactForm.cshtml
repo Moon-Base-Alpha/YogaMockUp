@@ -1,0 +1,127 @@
+﻿@model YogaMockUp.Models.Contact
+
+@{
+    ViewData["Title"] = "Contact us";
+}
+<div class="container-fluid my-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6 text-center mb-5">
+                    <h1>Contact us</h1>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-12">
+                    <div class="wrapper">
+                        <div class="row mb-5">
+                            <div class="col-md-3">
+                                <div class="dbox w-100 text-center">
+                                    <div class="icon d-flex align-items-center justify-content-center">
+                                        <span class="fa fa-map-marker fa-white"></span>
+                                    </div>
+                                    <div class="text">
+                                        <p>Storgatan 70, 582 28 Linköping</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="dbox w-100 text-center">
+                                    <div class="icon d-flex align-items-center justify-content-center">
+                                        <span class="fa fa-envelope fa-white"></span>
+                                    </div>
+                                    <div class="text">
+                                        <p><a href="mailto:info@yogashastra.org">Email us</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="dbox w-100 text-center">
+                                    <div class="icon d-flex align-items-center justify-content-center">
+                                        <span class="fa fa-facebook fa-white"></span>
+                                    </div>
+                                    <div class="text">
+                                        <p><a href="https://www.facebook.com/yogashastra.org" target="_blank">Follow us on facebook</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="dbox w-100 text-center">
+                                    <div class="icon d-flex align-items-center justify-content-center">
+                                        <span class="fa fa-instagram fa-white"></span>
+                                    </div>
+                                    <div class="text">
+                                        <p><a href="https://www.instagram.com/yogashastra/" target="_blank">Follow us on Instagram</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row no-gutters">
+                            <div class="col-md-7">
+                                <div class="contact-wrap w-100 p-md-5 p-4">
+                                    <h3 class="mb-4">Send us a message</h3>
+                                    @*<div class="small">Required *</div>*@
+                            @if(ViewBag.Message != null)
+                                {
+                                <div class="alert alert-success">@ViewBag.Message</div>
+                            }
+                            <form method="POST" id="contactForm" name="contactForm" class="contactForm">
+                                        <input type="hidden" asp-for="Id" />
+                                        <div class="row">
+                                            <div class="col-md-6">
+												<div class="form-group">
+                                                    <label asp-for="FirstName" class="control-label">First name*</label>
+                                                    <input asp-for="FirstName" class="form-control" />
+                                                    <span asp-validation-for="FirstName" class="text-danger"></span>
+                                                </div>
+											</div>
+											<div class="col-md-6"> 
+												<div class="form-group">
+                                                    <label asp-for="LastName" class="control-label">Last name*</label>
+                                                    <input asp-for="LastName" class="form-control" />
+                                                    <span asp-validation-for="LastName" class="text-danger"></span>
+                                                </div>
+											</div>
+                                            <div class="col-md-12-contact">
+                                                <div class="form-group">
+                                                    <label asp-for="Email" class="control-label">Email*</label>
+                                                    <input asp-for="Email" class="form-control" />
+                                                    <span asp-validation-for="Email" class="text-danger"></span>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12-contact">
+                                                <div class="form-group">
+                                                    <label asp-for="Subject" class="control-label">Subject*</label>
+                                                    <input asp-for="Subject" class="form-control" />
+                                                    <span asp-validation-for="Subject" class="text-danger"></span>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12-contact">
+                                                <div class="form-group">
+                                                    <label asp-for="Message" class="control-label">Message*</label>
+                                                    <textarea asp-for="Message" class="form-control" rows="5"></textarea>
+                                                    <span asp-validation-for="Message" class="text-danger"></span>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12-contact">
+                                                <div class="form-group">
+                                                    <input type="submit" value="Send message" class="btn btn-primary" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="col-md-5 d-flex align-items-stretch">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4180.107489804565!2d15.611274534436703!3d58.40935408393237!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46596f3b56a1b6d3%3A0x1aea5c5f62d7f084!2sStorgatan%2070%2C%20582%2028%20Link%C3%B6ping!5e0!3m2!1sen!2sse!4v1644332003213!5m2!1sen!2sse" width="500" height="555" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+
+}

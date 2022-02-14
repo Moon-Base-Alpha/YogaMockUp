@@ -1,0 +1,17 @@
+﻿@page
+@model AccessDeniedModel
+@{
+    ViewData["Title"] = "Access denied";
+    Layout = "~/Views/Admin/_AdminLayout.cshtml";
+}
+<div class="container-fluid px-4">
+<header>
+<br /><br />
+    <div style="text-align: center;">
+    <h1 class="text-danger">@ViewData["Title"]</h1>
+    <h4 class="text-danger">You do not have access to this resource.</h4>
+    <br />
+    <a asp-page="/Admin" class="btn btn-primary">return</a>
+    </div>
+</header>
+</div>

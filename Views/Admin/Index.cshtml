@@ -1,0 +1,15 @@
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+
+@{
+     Layout = "~/Views/Admin/_AdminLayout.cshtml";
+}
+
+<div class="container-fluid px-4">
+    <h3 class="mt-4">Welcome @((await UserManager.GetUserAsync(User)).FirstName)!</h3>
+
+    <div class="row">
+       
+    </div>
+</div>

@@ -8,12 +8,34 @@
 
   <ItemGroup>
     <PackageReference Include="bootstrap" Version="5.1.3" />
+    <PackageReference Include="Extensions.Hosting.AsyncInitialization" Version="1.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="5.0.12" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="5.0.12" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="5.0.12" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="5.0.12" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.12" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.12" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Data\Migrations\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Migrations\" />
+    <Folder Include="wwwroot\images\AboutYoga\" />
+    <Folder Include="wwwroot\logo\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\images\YogaMiscServices\Abhyangam1.jpg" />
+    <None Include="wwwroot\images\YogaMiscServices\cropped-yoga-logo.png" />
+    <None Include="wwwroot\images\YogaMiscServices\deep.jpg" />
+    <None Include="wwwroot\images\YogaMiscServices\footmassage.jpg" />
+    <None Include="wwwroot\images\YogaMiscServices\indian-Head-Massage-1.jpg" />
+    <None Include="wwwroot\images\YogaMiscServices\neck.jpg" />
+    <None Include="wwwroot\images\YogaMiscServices\No.09.jpg" />
   </ItemGroup>
 
 </Project>

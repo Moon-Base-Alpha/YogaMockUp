@@ -1,0 +1,74 @@
+﻿@model IEnumerable<YogaMockUp.Models.Course>
+
+@{
+    ViewData["Title"] = "GetAllCourses";
+    Layout = "~/Views/Admin/_AdminLayout.cshtml";
+}
+
+
+<div class="container-fluid px-4">
+    <br />
+    <h1>Manage courses</h1>
+    <a href="@Url.Action("CreateCourse", "AdminFunctions")" class="btn btn-primary"><i class="fas fa-plus"></i> Create course</a>
+<br /><br />
+<table id="datatablesSimple">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CourseName)
+            </th>
+@*            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>*@
+            <th>
+                @Html.DisplayNameFor(model => model.Location)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Price)
+            </th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Reverse()) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CourseName)
+            </td>
+            @*<td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>*@
+            <td>
+                @Html.DisplayFor(modelItem => item.Location)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                <div class="dropdown">
+                            <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fa fa-ellipsis-v"></i>
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                <li><a class="dropdown-item" asp-controller="AdminFunctions" asp-action="EditCourseInfo" asp-route-id="@item.Id"><i class="fas fa-edit"></i> Edit</a></li>
+                                <li><a class="dropdown-item" asp-controller="AdminFunctions"  asp-action="CourseDetails" asp-route-id="@item.Id"><i class="fa fa-info-circle"></i> Details</a></li>
+                                <li><a class="dropdown-item" asp-controller="AdminFunctions"  asp-action="Remove" asp-route-id="@item.Id" 
+                                     onclick="return confirm('Are you sure you want to delete @item.CourseName?')"><i class="fa fa-trash"></i> Delete</a></li>
+                            </ul>
+                        </div>
+
+                @*<a asp-action="EditCourseInfo" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details(N/A)</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete(N/A)</a>*@
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+</div>

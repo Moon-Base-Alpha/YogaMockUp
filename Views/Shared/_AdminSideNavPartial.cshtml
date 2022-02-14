@@ -1,0 +1,41 @@
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+
+<nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+    <div class="sb-sidenav-menu">
+        <div class="nav">
+            <br />
+            @*<a class="nav-link" href="index.html">
+                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                Dashboard
+            </a>*@
+            @if(SignInManager.IsSignedIn(User) && User.IsInRole("Superadmin") || User.IsInRole("Admin"))
+            {
+                <a class="nav-link" asp-controller="ManageUsers" asp-action="Index">
+                <div class="sb-nav-link-icon"><i class="fas fa-user-plus"></i></div>
+                Manage users
+                </a>
+                <a class="nav-link" asp-controller="RoleManager" asp-action="Index">
+                <div class="sb-nav-link-icon"><i class="fas fa-users"></i></div>
+                Create user roles
+                </a>
+                <a class="nav-link" asp-controller="AdminFunctions" asp-action="GetAllCourses">
+                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                Manage courses
+                </a>
+                <a class="nav-link" asp-controller="Contact" asp-action="GetAllContacts">
+                <div class="sb-nav-link-icon"><i class="fas fa-envelope"></i></div>
+                Manage messages
+                </a>
+                <a class="nav-link" asp-controller="TCourse" asp-action="Index">
+                <div class="sb-nav-link-icon"><i class="fas fa-calendar"></i></div>
+                Manage Teacher course
+                </a>
+            }
+    </div>
+@*    <div class="sb-sidenav-footer">
+        <div class="small">Logged in as:</div>
+        Start Bootstrap
+    </div>*@
+</nav>
