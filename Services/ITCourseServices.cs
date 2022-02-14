@@ -12,6 +12,7 @@ namespace YogaMockUp.Services
 
         public List<TCourse> TCoursesList();
         public TCourse GetTCourse(int Id);
-        void UpdateTCourse(TCourse c);
+        void Create(Course course);
+        void UpdateCourse(TCourse c);
     }
 }
