@@ -2,13 +2,16 @@
 
 @{
     ViewData["Title"] = "Index";
+    Layout = "~/Views/Admin/_AdminLayout.cshtml";
+
 }
 
-<h1>Index</h1>
+<h1>Teacher Training Courses</h1>
+<a class="btn btn-primary" asp-action="Create" ><i class="fas fa-plus"></i> Create Course</a>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
+@*<p>
+    <a asp-action="Create">Create New Teacher Training Course</a>
+</p>*@
 <table class="table">
     <thead>
         <tr>
