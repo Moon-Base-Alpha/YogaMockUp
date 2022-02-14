@@ -83,6 +83,12 @@ namespace YogaMockUp.Controllers
             return View("LearnAboutYoga");
         }
         [HttpGet]
+        public IActionResult YogaMiscServices()
+        {
+
+            return View("YogaMiscServices");
+        }
+        [HttpGet]
         public IActionResult OurCurrentEvents()
         {
             return View("OurCurrentEvents");
