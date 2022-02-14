@@ -295,23 +295,36 @@ a {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color: #B23992;
     color: white;
-    padding: 1% 5% 1% 5%;
+    /*padding: 1% 5% 1% 5%*/;
 }
 
-    #ttctitle img {
-        
-    }
-
-    #whoshouldjoin {
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        background-color: #B23992;
-        color: white;
+    #ttctitle h1 {
+        font-weight: bolder;
+        text-align: center;
         padding: 1% 5%;
     }
-#ttctitle h1 {
-    font-weight: bolder;
+
+    #ttctitle h3 {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        text-align: center;
+        padding: 1% 5%;
+    }
+    #ttctitle img {
+        max-width:100%;
+    }
+
+     #ttcptitle {
+        padding: 1% 20%;
+        font-weight: bolder;
+    }
+
+#whoshouldjoin {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #B23992;
+    color: white;
     padding: 1% 5%;
 }
+
 
 #whoshouldjoin h3 {
     text-align: center;
@@ -326,11 +339,16 @@ a {
 
 
 #testimonials {
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-    }
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 1% 2%;
+}
 
 #courseprep {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 1% 5%;
+}
+#coursepreplogo {
+    text-align: center;
 }
 
 /* End of Tacher Certificate Courses */
