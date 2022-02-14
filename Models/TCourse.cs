@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace YogaMockUp.Models
 {
@@ -21,7 +22,7 @@ namespace YogaMockUp.Models
         [Required]
         public DateTime Date { get; set; } = new DateTime();
 
-        [Required, DataType(DataType.Currency)]
+        [Required, DataType(DataType.Currency), Column(TypeName = "decimal(10,0)")]
         public decimal Price { get; set; }
 
         public List<ApplicationUser> Users { get; set; } = new List<ApplicationUser>();

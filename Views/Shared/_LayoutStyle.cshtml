@@ -44,6 +44,9 @@
     </style>
 
 </head>
+
+@* Logged in Layout *@
+
 <body  style="background-color:rgba(255,165,0,0.1)">
     <div id="mandala" class="mandala" >
     @*<button onclick="topFunction()" id="myBtn" title="Back to top"><i class="fas fa-arrow-alt-circle-up"></i></button>  *@
@@ -73,11 +76,11 @@
                                     <li class="nav-item">
                                         <a class="nav-link" asp-area="" asp-controller="AdminFunctions" asp-action="GetAllCourses">List all courses</a>
                                     </li>*@
-                                    <li class="nav-item">
+                                    @*<li class="nav-item">
                                         <a class="nav-link" asp-area="" asp-controller="home" asp-action="Studentcourses">Studentcourses</a>
-                                    </li>
+                                    </li>*@
                                     <li class="nav-item">
-                                        <a class="nav-link" asp-area="" asp-controller="Contact" asp-action="ContactForm">Contact</a>
+                                        <a class="nav-link" asp-area="" asp-controller="Contact" asp-action="ContactForm">Contact and Find Us</a>
                                     </li>
                                 </ul>
                                 <partial name="_LoginPartial" />
@@ -85,29 +88,28 @@
                     </div>
                 </nav>
             </header>
-            <div class="container ">
-                <main role="main" class="pb-3 col-lg-12 col-md-12 col-sm-12 col-xs-12 align-content-center ">
+            <div class="contain_fluid">
+                <main @* role="main" class="pb-3 col-lg-12 col-md-12 col-sm-12 col-xs-12 align-content-center "*@>
                     @RenderBody()
                 </main>
             </div>
         </div>
-        <div class="container">
+      @*  <div class="container">
             <main role="main" class="pb-3">
                 @RenderBody()
             </main>
-        </div>
+        </div>*@
 
-        
-        <div class="lotus"><!--Block to center-->
-            <img src="/images/lotus-icon.png" alt="Lotus" width="333" height="99">
-        </div>
-
-
-        <footer class="border-top footer text-muted">
-            <div class="container">
-                &copy; 2022 - YogaMockUp - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+      <div>  
+            <div class="fixed">
+                <img src="/images/lotus-icon.png" alt="Lotus" width="280">
             </div>
-        </footer>
+            <footer class="footer">
+                <div class="container">
+                    &copy; 2022 - YogaMockUp - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                </div>
+            </footer>
+        </div>
     </div>
 
 @*    <script>

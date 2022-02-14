@@ -42,7 +42,7 @@ namespace YogaMockUp
                 options.Password.RequireLowercase = true;
                 options.Password.RequireUppercase = true;
                 options.Password.RequireNonAlphanumeric = false;
-                options.Password.RequiredLength = 6;
+                options.Password.RequiredLength = 8;
                 options.User.RequireUniqueEmail = true;
             })
                 .AddRoles<IdentityRole>()
@@ -53,8 +53,8 @@ namespace YogaMockUp
             // Connecting the services to their interfaces
             services.AddTransient<IGlobalServices, GlobalServices>();
             services.AddTransient<ITCourseServices, TCourseServices>();
-
-            services.AddTransient<IEmailSender, EmailSender>();
+            services.AddTransient<IContactServices, ContactServices>();
+            //services.AddTransient<IEmailSender, EmailSender>();
 
             //Adding DbInitializer Service
             services.AddAsyncInitializer<DbInitializer>();
