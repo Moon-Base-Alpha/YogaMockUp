@@ -350,6 +350,11 @@ a {
 #coursepreplogo {
     text-align: center;
 }
+#courseprep .card-title {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bolder;
+}
+
 
 /* End of Tacher Certificate Courses */
 
