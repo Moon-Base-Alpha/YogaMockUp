@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace YogaMockUp.Models
 {
@@ -6,8 +7,11 @@ namespace YogaMockUp.Models
     {
         public int Id { get; set; }
 
-        [Required, StringLength(100), Display(Name = "Full Name")]
-        public string FullName { get; set; }
+        [Required, StringLength(100), Display(Name = "First Name")]
+        public string FirstName { get; set; }
+
+        [Required, StringLength(100), Display(Name = "Last Name")]
+        public string LastName { get; set; }
 
         [Required, StringLength(100)]
         public string Email { get; set; }
@@ -18,9 +22,28 @@ namespace YogaMockUp.Models
         [Required, StringLength(1000)]
         public string Message { get; set; }
 
+        [Required]
+        public DateTime Created { get; set; }
+
         public Contact()
         {
 
         }
+
+        public Contact(DateTime created)
+        {
+            Created = created;
+        }
+
+        public Contact(string firstName, string lastName, string email, string subject, string message)
+        {
+            FirstName = firstName;
+            LastName = lastName;
+            Email = email;
+            Subject = subject;
+            Message = message;
+            Created = DateTime.Now;
+        }
     }
 }
+

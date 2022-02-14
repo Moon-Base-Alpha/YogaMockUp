@@ -266,6 +266,10 @@ img #lotus {
 .col-md-12-contact {
     padding-bottom: 1.2rem !important;
 }
+
+.col-md-6 {
+    padding-bottom: 1.2rem !important;
+}
 /*End contact page css */
 
 
@@ -326,7 +330,7 @@ hr.style14 {
     height: 3px;
     background-image: -webkit-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
     background-image: -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
-    background-image: -ms-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+    background-image: -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
     background-image: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
 }
 /*End Special horizontal line*/

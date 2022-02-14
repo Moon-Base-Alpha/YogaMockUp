@@ -1,0 +1,23 @@
+﻿@model YogaMockUp.Models.Contact
+
+@{
+    ViewData["Title"] = "Message details";
+    Layout = "~/Views/Admin/_AdminLayout.cshtml";
+}
+
+
+<div class="container-fluid px-4">
+    <br />
+    <h1>Message details</h1>
+    <hr />
+    @*<span style="font-weight:500">ID: </span>@Html.DisplayFor(Model => Model.Id)<br />*@
+    <span style="font-weight:500">Name: </span>@Html.DisplayFor(Model => Model.FirstName) @Html.DisplayFor(Model => Model.LastName)<br />
+    <span style="font-weight:500">Email: </span>@Html.DisplayFor(Model => Model.Email)<br />
+    <span style="font-weight:500">Subject: </span>@Html.DisplayFor(Model => Model.Subject)<br />
+    <span style="font-weight:500">Message: </span>@Html.DisplayFor(Model => Model.Message)<br />
+    <span style="font-weight:500">Created date: </span>@Html.DisplayFor(Model => Model.Created)<br />
+    <div>
+        <hr />
+        <a asp-action="GetAllContacts" class="btn btn-secondary">Back to message list</a>
+    </div>
+</div>
