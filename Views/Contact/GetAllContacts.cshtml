@@ -1,0 +1,71 @@
+﻿@model IEnumerable<YogaMockUp.Models.Contact>
+
+@{
+    ViewData["Title"] = "GetAllContacts";
+    Layout = "~/Views/Admin/_AdminLayout.cshtml";
+}
+
+
+<div class="container-fluid px-4">
+    <br />
+    <h1>Manage messages</h1>
+<br /><br />
+<table id="datatablesSimple">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LastName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Subject)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Created)
+            </th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Reverse()) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            @*<td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>*@
+            <td>
+                @Html.DisplayFor(modelItem => item.FirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Subject)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Created)
+            </td>
+            <td>
+                <div class="dropdown">
+                            <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fa fa-ellipsis-v"></i>
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                <li><a class="dropdown-item" asp-controller="Contact"  asp-action="ContactDetails" asp-route-id="@item.Id"><i class="fa fa-info-circle"></i> Details</a></li>
+                                <li><a class="dropdown-item" asp-controller="Contact"  asp-action="Remove" asp-route-id="@item.Id" 
+                                     onclick="return confirm('Are you sure you want to delete message from @item.FirstName @item.LastName?')"><i class="fa fa-trash"></i> Delete</a></li>
+                            </ul>
+                        </div>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+</div>

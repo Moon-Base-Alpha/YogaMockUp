@@ -65,7 +65,7 @@ namespace YogaMockUp.Services
                     Address = "WorldstreetAddress",
                     City = "WorldCity",
                     ZipCode = "12345",
-                    
+
                 };
                 var result = await _userManager.CreateAsync(user, "123Asd@1");
                 if (result.Succeeded)
@@ -81,9 +81,9 @@ namespace YogaMockUp.Services
                     LastName = "adminson",
                     UserName = "admin@email.com",
                     Email = "admin@email.com",
-                    Address= "Lexicon",
-                    City= "Linkoping",
-                    ZipCode= "12345",
+                    Address = "Lexicon",
+                    City = "Linkoping",
+                    ZipCode = "12345",
                 };
                 var result = await _userManager.CreateAsync(user, "123Asd@1");
                 if (result.Succeeded)
@@ -184,9 +184,10 @@ namespace YogaMockUp.Services
             }
             // End seed users //
 
-            if(!(_db.Courses.Count() > 0))
+            // Seed courses //
+            if (!(_db.Courses.Count() > 0))
             {
-                var course = new Course 
+                var course = new Course
                 {
                     CourseName = "Beginner’s level 1",
                     Description = "For you who are completely new to hatha yoga or wish to gain a clear knowledge of the " +
@@ -200,7 +201,7 @@ namespace YogaMockUp.Services
                 };
                 _db.Courses.Add(course);
 
-                course = new Course 
+                course = new Course
                 {
                     CourseName = "Beginner’s level-2",
                     Description = "For you who have completed a Beginners’ course or already have some understanding of yoga. " +
@@ -215,7 +216,7 @@ namespace YogaMockUp.Services
                 };
                 _db.Courses.Add(course);
 
-                course = new Course 
+                course = new Course
                 {
                     CourseName = "Intermediate level",
                     Description = "For you who have completed the beginners level 2′ course or already have practising yoga " +
@@ -228,7 +229,7 @@ namespace YogaMockUp.Services
                 };
                 _db.Courses.Add(course);
 
-                course = new Course 
+                course = new Course
                 {
                     CourseName = "Lunchtime yoga",
                     Description = "These classes are suitable for beginners to intermediates. This one-hour classes will help " +
@@ -257,12 +258,48 @@ namespace YogaMockUp.Services
                     Price = 445
                 };
                 _db.Events.Add(eventvar);
-
-
-
                 _db.SaveChanges();
             }
+            // End seed courses//
 
+            //Seed messages//
+            if (!(_db.Contacts.Count() > 0))
+            {
+                var contact = new Contact
+                {
+                    FirstName = "Peter",
+                    LastName = "Parker",
+                    Email = "peter@email.com",
+                    Subject = "How to apply for the yoga course?",
+                    Message = "Hi, can you tell me how to apply for the summmer yoga course, thank!",
+                    Created = System.DateTime.Now,
+                };
+                _db.Contacts.Add(contact);
+
+                contact = new Contact
+                {
+                    FirstName = "Lisa",
+                    LastName = "Simpson",
+                    Email = "lisa@email.com",
+                    Subject = "How to apply online yoga course?",
+                    Message = "Hi, can you tell me how to apply for the online yoga course, thank!",
+                    Created = System.DateTime.Now,
+                };
+                _db.Contacts.Add(contact);
+
+                contact = new Contact
+                {
+                    FirstName = "Mary",
+                    LastName = "Watson",
+                    Email = "mary@email.com",
+                    Subject = "How much for the event on next year?",
+                    Message = "Hi, can you tell me the price for the event on 2023, thank!",
+                    Created = System.DateTime.Now,
+                };
+                _db.Contacts.Add(contact);
+                _db.SaveChanges();
+            }
+            //End Seed messages//
         }
     }
 }
