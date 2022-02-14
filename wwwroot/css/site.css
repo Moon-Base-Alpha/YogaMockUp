@@ -351,8 +351,10 @@ a {
     text-align: center;
 }
 
+#courseprep .card-title {
+    font-weight: bolder;
+}
 /* End of Tacher Certificate Courses */
-
 /*Special horizontal line*/
 hr.style14 {
     border: 0;
