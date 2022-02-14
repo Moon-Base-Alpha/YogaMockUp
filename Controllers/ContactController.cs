@@ -51,19 +51,6 @@ namespace YogaMockUp.Controllers
                                 From Yoga Shastra";
                     msg.IsBodyHtml = true;
 
-                    //msg.ReplyToList.Add(contact.Email);
-                    //msg.Subject = "Thank you for your message!";
-                    //msg.Body = $@"Hello {contact.FirstName}, this is a copy from you request<br>
-
-                    //            Name: {contact.FirstName} {contact.LastName}<br>
-                    //            Email: {contact.Email}<br>
-                    //            Subject: {contact.Subject}<br>
-                    //            Message: ""{contact.Message}""<br>
-                    //            <br>
-                    //            Cheers,<br>
-                    //            From Yoga Shastra contact form";
-                    //msg.IsBodyHtml = true;
-
                     SmtpClient smtp = new SmtpClient();
                     smtp.Host = "smtp.gmail.com";
                     smtp.Port = 587;
